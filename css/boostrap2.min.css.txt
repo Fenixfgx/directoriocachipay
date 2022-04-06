@@ -1,1 +1,0 @@
-.icon-search{background-position:-48px 0}
