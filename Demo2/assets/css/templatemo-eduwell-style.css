@@ -722,12 +722,12 @@ section.main-banner {
 .main-banner .header-text h2 {
   position: relative;
   z-index: 2;
-  margin-top: 20px;
+  margin-top: 31px;
   font-size: 64px;
   color: #111111;
   font-weight: 900;
   line-height: 74px;
-  margin-bottom: 40px;
+  margin-bottom: 12px;
 }
 
 .main-banner .header-text h2 em {
