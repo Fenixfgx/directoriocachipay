@@ -1,6 +1,12 @@
 @font-face{
-    font-family: 'dax';
-    src:url('Letra.ttf');
-    
+   
+font-family: 'Dr Sugiyama', cursive;
 }
 .dax { font-family: 'dax'; }
+
+@font-face{
+   
+font-family: 'Chicle', cursive;
+}
+.Chicle { font-family: 'Chicle'; }
+     
