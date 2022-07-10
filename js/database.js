@@ -10,7 +10,7 @@
 ,{"claves":"Veterinaria NN, mascotas, animales,alimento para gato, alimento para perro, concentrados, peces, perros, gatos, caballos medicina, ","description":"Al cuidado de las Mascotas","link":"/veterinaria.html","title":"Veterinaria NN"}
 ,{"claves":"Contegral, Cointegral, mascotas, alimento para gato, alimento para perro, animales, concentrados, peces, medicina, ","description":"Concentrado para Animales","link":"/contegral.html","title":"Contegral"}
 ,{"claves":"Fitness Club, Club, Gimnasios, GYM, masajes, relajacion, bailes, danzas","description":"Danzas, Gimnasio, Masajes y mucho mas..","link":"/fitnessclub.html","title":"Fitness Club"}
-,{"claves":"Funarde, Bailes, Tekondo, Taekwondo, Ballet, Balet, Yamile, Fundacion, Donaciones, Apadrinar, niños, niñas","description":"Fundación de Arte y Cultura, Apadrina un niño..","link":" directoriocachipay/FUNARDE/index.html","title":"FUNARDE"}
+,{"claves":"Funarde, Bailes, Tekondo, Taekwondo, Ballet, Balet, Yamile, Fundacion, Donaciones, Apadrinar, niños, niñas","description":"Fundación de Arte y Cultura, Apadrina un niño..","link":" /FUNARDE/index.html","title":"FUNARDE"}
 ,{"claves":"Turismo, Viajes, Vuelos, Vacaciones, ONvacation, Esperanza, Servicios","description":"Viaja a los mejores destinos y al mejor precio","link":"/onvacationcachipay.html","title":"ON VACATION CACHIPAY"}
 
 
