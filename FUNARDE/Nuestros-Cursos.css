@@ -338,7 +338,6 @@
 
   .u-section-1 .u-repeater-1 {
     min-height: 484px;
-    grid-auto-columns: calc(50% - 10px);
   }
 
   .u-section-1 .u-container-layout-1 {
@@ -1132,7 +1131,6 @@
   .u-section-4 .u-repeater-1 {
     grid-template-columns: 100%;
     min-height: 584px;
-    grid-auto-columns: 100%;
   }
 
   .u-section-4 .u-container-layout-1 {
@@ -1158,6 +1156,7 @@
   }
 
   .u-section-4 .u-text-2 {
+    font-size: 1.25rem;
     width: 340px;
     margin-top: 0;
     margin-left: auto;
@@ -1348,6 +1347,16 @@
 
   .u-section-5 .u-over-slide-3 {
     padding: 30px;
+  }
+
+  .u-section-5 .u-carousel-control-1 {
+    left: 0;
+    padding: 12px;
+  }
+
+  .u-section-5 .u-carousel-control-2 {
+    right: 0;
+    padding: 12px;
   }
 
   .u-section-5 .u-text-1 {
