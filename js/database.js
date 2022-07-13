@@ -12,6 +12,7 @@
 ,{"claves":"Fitness Club, Club, Gimnasios, GYM, masajes, relajacion, bailes, danzas","description":"Danzas, Gimnasio, Masajes y mucho mas..","link":"/fitnessclub.html","title":"Fitness Club"}
 ,{"claves":"Funarde, Bailes, Tekondo, Taekwondo, Ballet, Balet, Yamile, Fundacion, Donaciones, Apadrinar, niños, niñas","description":"Fundación de Arte y Cultura, Apadrina un niño..","link":" FUNARDE/index.html","title":"FUNARDE"}
 ,{"claves":"Turismo, Viajes, Vuelos, Vacaciones, ONvacation, Esperanza, Servicios","description":"Viaja a los mejores destinos y al mejor precio","link":"/onvacationcachipay.html","title":"ON VACATION CACHIPAY"}
+,{"claves":"Partido, Politica, Colombia Consciente, Consciente, Danny","description":"Partido Politico","link":"https://www.partidocolombiaconsciente.com/","title":"Partido Politico Colombia Consciente"}
 
 
 
