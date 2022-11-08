@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<head>
+    <title>Añadir</title>
+    <!-- META TAGS FOR MOBILE -->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0">
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" type="text/css" href="css/style-add.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/add.js"></script>
+</head>
+<body>
+    <div id="loading">
+        <div>Loading...</div>
+    </div>
+    <div id="notification"></div>
+    <div id="page-wrap">
+        <div id="contact-area">
+            <form id="addForm" class="form-horizontal" method="post">
+                <div class="control-group">
+                    <label class="control-label" for="titulo">T&iacute;tulo</label>
+                    <div class="controls">
+                        <div class="input-append">
+                            <input type="text" name="titulo" placeholder="Título" id="titulo" class="input-xlarge"/>
+                            <span class="add-on"><i class="icon-asterisk"></i></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label class="control-label" for="link">link</label>
+                    <div class="controls">
+                        <div class="input-append">
+                            <input type="text" name="link" placeholder="link" id="link" class="input-xlarge"/>
+                            <span class="add-on"><i class="icon-asterisk"></i></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label class="control-label" for="descripcion">Descripci&oacute;n</label>
+                    <div class="controls">
+                        <div class="input-append">
+                            <input type="text" name="desc" placeholder="descripción" id="descripcion" class="input-xlarge"/>
+                            <span class="add-on"><i class="icon-asterisk"></i></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label class="control-label" for="claves">Palabras claves</label>
+                    <div class="controls">
+                        <div class="input-append">
+                            <input type="text" name="claves" placeholder="claves"  id="claves" class="input-xlarge"/>
+                            <span class="add-on"><i class="icon-asterisk"></i></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <div class="controls">
+                        <button type="submit" name="submit" class="btn"><i class="icon-plus"></i> Añadir</button>
+                        <a class="btn btn-danger" href="index.html"><i class="icon-arrow-left"></i> Volver</a>
+                    </div>
+                </div>
+            </form>
+            <hr>
+            <div class="control-group form-horizontal">
+                <div class="controls">
+                    <button name="index" class="btn" id="index"><i class="icon-plus"></i> Indexar archivos</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
