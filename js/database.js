@@ -14,7 +14,7 @@
 ,{"claves":"Turismo, Viajes, Vuelos, Vacaciones, ONvacation, Esperanza, Servicios","description":"Viaja a los mejores destinos y al mejor precio","link":"/onvacationcachipay.html","title":"ON VACATION CACHIPAY"}
 ,{"claves":"Partido, Politica, Colombia Consciente, Consciente, Danny","description":"Partido Politico","link":"https://www.partidocolombiaconsciente.com/","title":"Partido Politico Colombia Consciente"}
 ,{"claves":"App, Aplicacion, Cachipay, Directorio Cachipay, DC","description":"Gestion y Contacto","link":" Directorio/DC.html","title":"Directorio Cachipay"}
-,{"claves":"Policia, tombos, Nacional, Fuerza Publica, 123","description":"Fuerza Publica","link":" Directorio/Policia-Nacional.html","title":"Policia Cachipay"}
+,{"claves":"Policia, tombos, Nacional, Fuerza Publica, 123, Policía, Cuadrante","description":"Fuerza Publica","link":" Directorio/Policia-Nacional.html","title":"Policía Cachipay"}
 
 
 
