@@ -1,0 +1,196 @@
+/* 
+    Document   : style
+    Created on : 09-feb-2013, 9:21:10
+    Author     : andres
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+*{
+    outline: 0;
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+
+
+html{
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    top: 0;
+}
+
+body{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    font-family: arial;
+    font-size: 100%;
+}
+
+#logo{
+    text-align: center;
+}
+
+#wrapper{
+    display: none;
+    top: 14px;
+    position: relative;
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+    opacity: 0;
+    -webkit-transition: opacity 1s, -webkit-transform 0.5s, width 0.5s;
+    -webkit-transform: translateX(40px);
+    -ms-transition: opacity 1s, -ms-transform 0.5s;
+    -ms-transform: translateX(40px);
+    -o-transition: opacity 1s, -o-transform 0.5s;
+    -o-transform: translateX(40px);
+    -moz-transition: opacity 1s, -moz-transform 0.5s;
+    -moz-transform: translateX(40px);
+}
+
+.initWeb{
+    -webkit-transform: translateX(0px) !important;
+    -ms-transform: translateX(0px) !important;
+    -o-transform: translateX(0px) !important;
+    -moz-transform: translateX(0px) !important;
+    opacity: 1 !important;
+}
+
+#logo{
+    height: 190px;
+    overflow: hidden;
+    -webkit-transition: opacity 1s, height 0.5s;
+    -ms-transition: opacity 1s, height 0.5s;
+    -o-transition: opacity 1s, height 0.5s;
+    -moz-transition: opacity 1s, height 0.5s;
+    margin-bottom: 10px;
+}
+
+.closeLogo{
+    height: 0 !important;
+}
+
+#found{
+    display: none;
+    position: relative;
+    top: 30px;
+    width: 90%;
+    margin: 0 auto;
+    opacity: 0;
+    -webkit-transition: opacity 1s, -webkit-transform 0.5s, width 0.5s;
+    -webkit-transform: translateX(40px);
+    -ms-transition: opacity 1s, -ms-transform 0.5s;
+    -ms-transform: translateX(40px);
+    -o-transition: opacity 1s, -o-transform 0.5s;
+    -o-transform: translateX(40px);
+    -moz-transition: opacity 1s, -moz-transform 0.5s;
+    -moz-transform: translateX(40px);
+}
+
+.linkGreen{
+    color: green;
+}
+
+.description{
+    margin-top: 20px;
+}
+
+.itemResult{
+    width: 100%;
+    display: none;
+}
+
+#section1{
+    display: block;
+}
+
+#paginator{
+    display: none;
+    margin: 0 auto;
+    opacity: 0;
+    -webkit-transition: opacity 1s, -webkit-transform 0.5s;
+    -webkit-transform: translateX(40px);
+    -ms-transition: opacity 1s, -ms-transform 0.5s;
+    -ms-transform: translateX(40px);
+    -o-transition: opacity 1s, -o-transform 0.5s;
+    -o-transform: translateX(40px);
+    -moz-transition: opacity 1s, -moz-transform 0.5s;
+    -moz-transform: translateX(40px);
+    padding-bottom: 30px;
+}
+
+.alert{
+    text-align: center;
+}
+
+.itemResultado{
+    background: transparent;
+    opacity: 0.8;
+    word-wrap: break-word
+}
+
+.itemResultado:hover{
+    opacity: 1;
+}
+
+#loading{
+    position: absolute;
+    display: none;
+    width: 100%;
+    height: 30px;
+    left: 0;
+}
+
+#loading div{
+    width: 150px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 3px 0;
+    background: #fff1a8;
+}
+
+#searchForm .input-append{
+    width: 100%;
+}
+
+#searchForm{
+    text-align: center;    
+}
+
+#searchForm input{
+    width: 85%;
+    height: 46px;
+}
+
+#container-paginator{
+    position: relative;
+    top: 30px;
+    width: 90%;
+    height: auto;
+    overflow: hidden;
+    margin: 0 auto;
+    -webkit-transition: width 0.5s;
+}
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) {
+    #searchForm input{
+        width: 80%;
+    }
+}
+
+/* Desktops and laptops ----------- */
+@media only screen 
+and (min-width : 1224px) {
+    #wrapper{
+        width: 70%;
+    }
+
+    #found, #container-paginator{
+        width: 80%;
+    }
+}

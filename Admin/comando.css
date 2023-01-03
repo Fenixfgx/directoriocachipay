@@ -1,0 +1,18 @@
+.parrafo {
+ display: flex;
+ justify-content: center;
+}
+h3 { font-size: calc(1em + 0.5vw) }
+h3 { font-family: Open Sans ; font-style: italic; text-align: center; vertical-align: middle; }
+element.style {
+    height: 200px;
+}
+.parrafo p {
+  
+  width: 100%;
+ 
+  
+  margin: auto;
+  white-space: wrap;
+  overflow: hidden;
+}
