@@ -288,3 +288,29 @@ window.onload = function() {
     search = new jsearch();
     search.init();
 };
+
+var found = this.get('found');
+found.innerHTML = "";
+var ul = document.createElement("ul");
+ul.className = "items";
+for (var i = 0; i < this.itemsFound.length; i++) {
+var item = this.itemsFound[i];
+var li = document.createElement("li");
+li.className = "item";
+var a = document.createElement("a");
+a.setAttribute("href", item.link);
+a.setAttribute("target", "_blank");
+var divImg = document.createElement("div");
+divImg.className = "img";
+var img = document.createElement("img");
+img.setAttribute("src", item.img); // <-- Agrega la imagen de referencia aquí
+divImg.appendChild(img);
+a.appendChild(divImg);
+var divText = document.createElement("div");
+divText.className = "text";
+var h3 = document.createElement("h3");
+h3.innerHTML = item.title;
+divText.appendChild(h3);
+var p = document.createElement("p");
+p.innerHTML = item.description;
+divText
