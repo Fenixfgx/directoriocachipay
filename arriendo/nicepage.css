@@ -38280,6 +38280,12 @@ a.u-link.u-text-hover-grey-90:hover {
 .u-header .u-nav-2 {
   font-size: 1.25rem;
 }
+
+.u-header .u-image-2 {
+  width: 68px;
+  left: auto;
+  right: 102px;
+}
 @media (max-width: 1199px) {
   .u-header .u-menu-1 {
     width: auto;
@@ -38289,18 +38295,23 @@ a.u-link.u-text-hover-grey-90:hover {
 
 @media (max-width: 575px) {
   .u-header .u-sheet-1 {
-    min-height: 66px;
+    min-height: 67px;
   }
 
   .u-header .u-image-1 {
     width: 63px;
     height: 64px;
-    margin-top: 2px;
-    margin-left: 96px;
+    margin-top: 3px;
+    margin-left: 99px;
   }
 
   .u-header .u-menu-1 {
-    margin: -49px auto 17px 16px;
+    margin: -49px auto 0 16px;
+  }
+
+  .u-header .u-image-2 {
+    left: auto;
+    right: 102px;
   }
 }
  .u-footer {
