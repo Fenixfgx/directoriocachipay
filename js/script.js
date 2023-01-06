@@ -174,6 +174,11 @@ window.onload = function() {
         }, 1000);
     };
 
+  var imageElement = document.createElement("img");
+  imageElement.src = result.image;
+  resultElement.appendChild(imageElement);
+
+
     jsearch.prototype.appendElements = function() {
         this.resetPaginator();
         this.get("found").innerHTML = "";
