@@ -144,6 +144,37 @@ window.onload = function() {
         if (this.ismobile) {
             document.forms.searchForm.search.blur();
         }
+
+for (var i = 0; i < this.itemsFound.length; i++) {
+  // Crea el elemento div para cada resultado
+  var div = document.createElement("div");
+  div.className = "item";
+
+  // Crea el elemento img para mostrar la imagen del resultado
+  var img = document.createElement("img");
+  img.src = this.itemsFound[i].image;
+  img.alt = this.itemsFound[i].title;
+  div.appendChild(img);
+
+  // Crea el elemento h2 para mostrar el título del resultado
+  var h2 = document.createElement("h2");
+  var a = document.createElement("a");
+  a.innerHTML = this.itemsFound[i].title;
+  a.href = this.itemsFound[i].link;
+  h2.appendChild(a);
+  div.appendChild(h2);
+
+  // Crea el elemento p para mostrar la descripción del resultado
+  var p = document.createElement("p");
+  p.innerHTML = this.itemsFound[i].description;
+  div.appendChild(p);
+
+  // Agrega el elemento div al contenedor de resultados
+  this.get("found").appendChild(div);
+}
+
+
+
         this.itemsFound = [];
         this.removeClass(this.get("paginator"), "initWeb");
         this.removeClass(this.get("found"), "initWeb");
@@ -174,9 +205,6 @@ window.onload = function() {
         }, 1000);
     };
 
-  var imageElement = document.createElement("img");
-  imageElement.src = result.image;
-  resultElement.appendChild(imageElement);
 
 
     jsearch.prototype.appendElements = function() {
