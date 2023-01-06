@@ -256,6 +256,15 @@ window.onload = function() {
         this.items.push({"title": title, "link": link, "description": description, "claves": claves});
     };
 
+jsearch.prototype.createDiv = function(item) {
+    var div = document.createElement("div");
+    div.className = "item";
+    div.innerHTML = '<a href="' + item.link + '"><h3>' + item.title + '</h3></a>' +
+                    '<img src="' + item.image + '" width="100" height="100">' +
+                    '<p>' + item.description + '</p>';
+    return div;
+};
+
     jsearch.prototype.hasClass = function(ele, cls) {
         return ele.className.match(new RegExp('(\\s|^)' + cls + '(\\s|$)'));
     };
@@ -284,6 +293,16 @@ window.onload = function() {
         var ismobile = (/iphone|ipod|android|blackberry|opera|mini|windows\sce|palm|smartphone|iemobile|msie/i.test(navigator.userAgent.toLowerCase( )));
         return ismobile;
     };
+
+jsearch.prototype.createDiv = function(item) {
+    var div = document.createElement("div");
+    div.className = "item";
+    div.innerHTML = '<a href="' + item.link + '"><h3>' + item.title + '</h3></a>' +
+                    '<img src="' + item.image + '" width="100" height="100">' +
+                    '<p>' + item.description + '</p>';
+    return div;
+};
+
 
     search = new jsearch();
     search.init();
