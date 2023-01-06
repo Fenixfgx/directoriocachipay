@@ -1,3 +1,12 @@
+/* 
+ * Version 4.3
+ * Created by serdnah2
+ * @Andres542
+ * http://www.cornersopensource.com
+ * skype: andres54211
+ * If you need the search search in an folder, please change de var automatically for true, default is false
+ */
+
 window.onload = function() {
     window.scrollTo(0, 0);
     var that = null;
@@ -174,8 +183,6 @@ window.onload = function() {
         }, 1000);
     };
 
-
-
     jsearch.prototype.appendElements = function() {
         this.resetPaginator();
         this.get("found").innerHTML = "";
@@ -245,16 +252,8 @@ window.onload = function() {
         this.busy = false;
     };
 
-jsearch.prototype.addResult = function(item) {
-  var div = document.createElement("div");
-  div.className = "item";
-  div.innerHTML = '<a href="' + item.link + '" class="link"><h3 class="title">' + item.title + '</h3><p class="description">' + item.description + '</p><img src="' + item.image + '" alt="Imagen del resultado"></a>';
-  this.get("found").appendChild(div);
-};
-
-
     jsearch.prototype.addItem = function(title, link, description, claves) {
-        this.items.push({"image": img, "title": title, "link": link, "description": description, "claves": claves});
+        this.items.push({"title": title, "link": link, "description": description, "claves": claves});
     };
 
     jsearch.prototype.hasClass = function(ele, cls) {
