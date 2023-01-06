@@ -312,3 +312,17 @@ for (var i = 0; i < this.itemsFound.length; i++) {
     search = new jsearch();
     search.init();
 };
+
+
+
+jsearch.prototype.createResults = function(section, start) {
+    var html = "";
+    for (var i = start; i < this.itemsFound.length && i < start + 10; i++) {
+        html += '<a href="' + this.itemsFound[i].link + '">';
+        html += '<h2>' + this.itemsFound[i].title + '</h2>';
+        html += '<img src="' + this.itemsFound[i].imagen + '" alt="' + this.itemsFound[i].title + '">';
+        html += '<p>' + this.itemsFound[i].description + '</p>';
+        html += '</a>';
+    }
+    section.innerHTML = html;
+}
