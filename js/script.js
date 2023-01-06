@@ -144,37 +144,6 @@ window.onload = function() {
         if (this.ismobile) {
             document.forms.searchForm.search.blur();
         }
-
-for (var i = 0; i < this.itemsFound.length; i++) {
-  // Crea el elemento div para cada resultado
-  var div = document.createElement("div");
-  div.className = "item";
-
-  // Crea el elemento img para mostrar la imagen del resultado
-  var img = document.createElement("img");
-  img.src = this.itemsFound[i].image;
-  img.alt = this.itemsFound[i].title;
-  div.appendChild(img);
-
-  // Crea el elemento h2 para mostrar el título del resultado
-  var h2 = document.createElement("h2");
-  var a = document.createElement("a");
-  a.innerHTML = this.itemsFound[i].title;
-  a.href = this.itemsFound[i].link;
-  h2.appendChild(a);
-  div.appendChild(h2);
-
-  // Crea el elemento p para mostrar la descripción del resultado
-  var p = document.createElement("p");
-  p.innerHTML = this.itemsFound[i].description;
-  div.appendChild(p);
-
-  // Agrega el elemento div al contenedor de resultados
-  this.get("found").appendChild(div);
-}
-
-
-
         this.itemsFound = [];
         this.removeClass(this.get("paginator"), "initWeb");
         this.removeClass(this.get("found"), "initWeb");
@@ -276,8 +245,16 @@ for (var i = 0; i < this.itemsFound.length; i++) {
         this.busy = false;
     };
 
+jsearch.prototype.addResult = function(item) {
+  var div = document.createElement("div");
+  div.className = "item";
+  div.innerHTML = '<a href="' + item.link + '" class="link"><h3 class="title">' + item.title + '</h3><p class="description">' + item.description + '</p><img src="' + item.image + '" alt="Imagen del resultado"></a>';
+  this.get("found").appendChild(div);
+};
+
+
     jsearch.prototype.addItem = function(title, link, description, claves) {
-        this.items.push({"title": title, "link": link, "description": description, "claves": claves});
+        this.items.push({"image": img, "title": title, "link": link, "description": description, "claves": claves});
     };
 
     jsearch.prototype.hasClass = function(ele, cls) {
@@ -312,17 +289,3 @@ for (var i = 0; i < this.itemsFound.length; i++) {
     search = new jsearch();
     search.init();
 };
-
-
-
-jsearch.prototype.createResults = function(section, start) {
-    var html = "";
-    for (var i = start; i < this.itemsFound.length && i < start + 10; i++) {
-        html += '<a href="' + this.itemsFound[i].link + '">';
-        html += '<h2>' + this.itemsFound[i].title + '</h2>';
-        html += '<img src="' + this.itemsFound[i].imagen + '" alt="' + this.itemsFound[i].title + '">';
-        html += '<p>' + this.itemsFound[i].description + '</p>';
-        html += '</a>';
-    }
-    section.innerHTML = html;
-}
