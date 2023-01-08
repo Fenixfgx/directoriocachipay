@@ -38580,26 +38580,38 @@ a.u-link.u-text-hover-grey-90:hover {
 
 @media (max-width: 575px) {
   .u-footer .u-sheet-1 {
-    min-height: 74px;
+    min-height: 68px;
   }
 
   .u-footer .u-text-1 {
     width: auto;
-    margin-top: -7px;
+    margin-top: 0;
     margin-bottom: 0;
-    margin-left: 51px;
+    margin-left: 52px;
+  }
+
+  .u-footer .u-icon-1 {
+    font-size: 1.6876em;
   }
 
   .u-footer .u-text-2 {
-    margin-top: -81px;
+    margin-top: -68px;
     margin-bottom: 0;
-    margin-left: 119px;
+    margin-left: 122px;
+  }
+
+  .u-footer .u-icon-2 {
+    font-size: 1.6876em;
   }
 
   .u-footer .u-btn-1 {
     border-style: none;
-    margin: -91px auto 0 243px;
+    margin: -68px auto 0 255px;
     padding: 0;
+  }
+
+  .u-footer .u-icon-3 {
+    font-size: 1.6876em;
   }
 }
 
