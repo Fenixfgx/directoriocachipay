@@ -38642,40 +38642,40 @@ a.u-link.u-text-hover-grey-90:hover {
 }
 @media (max-width: 575px) {
   .u-footer .u-sheet-1 {
-    min-height: 45px;
+    min-height: 58px;
   }
 
   .u-footer .u-btn-1 {
     border-style: none;
     font-size: 0.75rem;
-    margin-top: 0;
+    margin-top: -1px;
     margin-right: 76px;
     padding: 0;
   }
 
   .u-footer .u-icon-1 {
-    font-size: 1.375em;
+    font-size: 2.0834em;
   }
 
   .u-footer .u-text-1 {
     width: auto;
     font-size: 0.75rem;
-    margin-top: -45px;
+    margin-top: -59px;
   }
 
   .u-footer .u-icon-2 {
-    font-size: 1.375em;
+    font-size: 2.0834em;
   }
 
   .u-footer .u-text-2 {
     font-size: 0.75rem;
-    margin-top: -45px;
+    margin-top: -59px;
     margin-right: auto;
     margin-left: 74px;
   }
 
   .u-footer .u-icon-3 {
-    font-size: 1.375em;
+    font-size: 2.0834em;
   }
 }
 
