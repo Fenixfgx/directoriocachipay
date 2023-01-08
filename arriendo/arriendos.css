@@ -4,4 +4,22 @@
 
 .u-section-1 .u-custom-html-1 {
   margin-bottom: 60px;
+}.u-section-2 .u-sheet-1 {
+  min-height: 89px;
+}
+
+@media (max-width: 575px) {
+  .u-section-2 .u-sheet-1 {
+    min-height: 70px;
+  }
+}footer {
+  
+  bottom: 0;
+  left: 0;
+  padding: 20px 0;
+  position: fixed;
+  right: 0;
+  text-align: center;
+}
+.position.webkit-sticky.required.for.Safari.position.sticky.top.required.as.well {
 }

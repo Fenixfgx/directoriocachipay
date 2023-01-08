@@ -10,24 +10,22 @@
     <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
     <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
     <meta name="generator" content="Nicepage 5.0.7, nicepage.com">
+    
     <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
+    
     
     
     <script type="application/ld+json">{
 		"@context": "http://schema.org",
 		"@type": "Organization",
-		"name": "Arriendos",
-		"logo": "images/searrienda.png"
+		"name": "Arriendos"
 }</script>
     <meta name="theme-color" content="#478ac9">
     <meta property="og:title" content="arriendos">
     <meta property="og:description" content="">
     <meta property="og:type" content="website">
   </head>
-  <body data-home-page="arriendos.html" data-home-page-title="arriendos" class="u-body u-xl-mode" data-lang="es"><header class="u-clearfix u-header u-sticky u-sticky-0e45 u-white u-header" id="sec-c612"><div class="u-clearfix u-sheet u-valign-middle-lg u-valign-middle-md u-valign-middle-sm u-valign-middle-xl u-sheet-1">
-        <a href="https://nicepage.com" class="u-align-center-xs u-image u-logo u-image-1" data-image-width="220" data-image-height="220">
-          <img src="images/searrienda.png" class="u-logo-image u-logo-image-1">
-        </a>
+  <body data-home-page="arriendos.html" data-home-page-title="arriendos" class="u-body u-stick-footer u-xl-mode" data-lang="es"><header class="u-clearfix u-header u-sticky u-sticky-0e45 u-white u-header" id="sec-c612"><div class="u-clearfix u-sheet u-valign-bottom-lg u-valign-bottom-sm u-valign-bottom-xs u-valign-middle-md u-valign-middle-xl u-sheet-1">
         <nav class="u-align-left-xs u-menu u-menu-one-level u-offcanvas u-menu-1">
           <div class="menu-collapse" style="font-size: 1rem; letter-spacing: 0px;">
             <a class="u-button-style u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-top-bottom-menu-spacing u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="#">
@@ -53,9 +51,10 @@
             <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
           </div>
         </nav>
-        <img class="u-expanded-height-xs u-image u-image-contain u-image-default u-image-2" src="images/sevende.png" alt="" data-image-width="220" data-image-height="220">
+        <img class="u-image u-image-contain u-image-default u-image-1" src="images/sevende.png" alt="" data-image-width="220" data-image-height="220">
+        <img class="u-image u-image-contain u-image-default u-preserve-proportions u-image-2" src="images/searrienda.png" alt="" data-image-width="220" data-image-height="220">
       </div></header>
-    <section class="u-clearfix u-section-1" id="sec-7f77">
+    <section class="u-clearfix u-section-1" id="sec-cf8b">
       <div class="u-clearfix u-sheet u-sheet-1">
         <div class="u-clearfix u-custom-html u-expanded-width u-custom-html-1">
           <title></title>
@@ -108,26 +107,26 @@
   font-family: Arial;
 }
 .call-button {
-  background-color: #4CAF50; /* Verde */
   border: none;
   color: white;
-  padding: 15px 32px;
+  padding: -3px 32px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  margin: 4px 10px;
+  font-family: arial;
+  margin: 4px 20%;
   cursor: pointer;
 }
 .whatsapp-button {
-  background-color: #4CAF50; /* Verde */
   border: none;
   color: white;
-  padding: 15px 32px;
+  padding: -3px 32px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
+  font-family: arial;
   margin: 4px 2px;
   cursor: pointer;
 } </style>
@@ -194,14 +193,14 @@ button.addEventListener('click', function() {
       var callButton = document.createElement('a');
       callButton.classList.add('call-button');
       callButton.href = 'tel:' + data.values[i][4];
-      callButton.innerHTML = 'Llamar';
+      callButton.innerHTML = '<img src="https://images.vexels.com/media/users/3/204667/isolated/lists/0be285c89368fd2d7b0499db071963ef-icono-de-llamada-azul.png" alt="Llamada"  width="52" >';
       details.appendChild(callButton);
     
 // Create the WhatsApp button
 var whatsappButton = document.createElement('a');
 whatsappButton.classList.add('whatsapp-button');
 whatsappButton.href = 'https://wa.me/' + data.values[i][5]; // Replace with the actual WhatsApp number
-whatsappButton.innerHTML = 'WhatsApp';
+whatsappButton.innerHTML = '<img src="https://close.marketing/wp-content/uploads/2019/04/whatsapp-icon-logo.png" alt="WhatsApp" class="whatsapp-button" width="50" >';
 details.appendChild(whatsappButton);
             // Append the elements to the item
             item.appendChild(image);
@@ -227,8 +226,18 @@ details.appendChild(whatsappButton);
         </div>
       </div>
     </section>
+    <section class="u-clearfix u-section-2" id="sec-61f9">
+      <div class="u-clearfix u-sheet u-sheet-1"></div>
+    </section>
     
     
-    
+    <footer class="Safari as for position required sticky top u-align-center u-border-1 u-border-grey-15 u-border-no-bottom u-border-no-left u-border-no-right u-clearfix u-footer u-white webkit-sticky well u-footer" id="sec-dead"><div class="u-clearfix u-sheet u-sheet-1">
+        <p class="u-text u-text-custom-color-1 u-text-default-xs u-text-1"><span class="u-file-icon u-icon u-text-custom-color-1 u-icon-1"><img src="images/846551-f1a6b92b.png" alt=""></span>&nbsp;<br>Casa
+        </p>
+        <p class="u-text u-text-custom-color-1 u-text-default-xs u-text-2"><span class="u-file-icon u-icon u-text-custom-color-1 u-icon-2"><img src="images/183511-4a935a65.png" alt=""></span>&nbsp;<br>Apartamento
+        </p>
+        <a href="https://nicepage.com/website-design" class="u-active-none u-bottom-left-radius-0 u-bottom-right-radius-0 u-btn u-btn-rectangle u-button-style u-hover-none u-none u-radius-0 u-text-custom-color-1 u-top-left-radius-0 u-top-right-radius-0 u-btn-1"><span class="u-file-icon u-icon u-text-custom-color-1 u-icon-3"><img src="images/7389972-609ab2f3.png" alt=""></span>&nbsp;<br>Lote
+        </a>
+      </div></footer>
   
 </body></html>
