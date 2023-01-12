@@ -38475,6 +38475,8 @@ a.u-link.u-text-hover-grey-90:hover {
 }
 
 .u-header .u-text-1 {
+  font-weight: normal;
+  font-size: 1.125rem;
   margin: 30px auto 60px 103px;
 }
 @media (max-width: 1199px) {
@@ -38555,7 +38557,6 @@ a.u-link.u-text-hover-grey-90:hover {
   }
 
   .u-header .u-image-1 {
-    width: 67px;
     margin-top: 6px;
     margin-right: 12px;
   }
