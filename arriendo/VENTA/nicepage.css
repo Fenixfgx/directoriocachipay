@@ -38553,6 +38553,10 @@ a.u-link.u-text-hover-grey-90:hover {
     margin-left: 16px;
   }
 
+  .u-header .u-nav-1 {
+    letter-spacing: normal;
+  }
+
   .u-header .u-nav-2 {
     margin: 20px 0 0;
   }
@@ -38560,7 +38564,7 @@ a.u-link.u-text-hover-grey-90:hover {
   .u-header .u-shape-1 {
     width: 67px;
     height: 5px;
-    margin: 7px auto 2px 103px;
+    margin: 8px 103px 1px auto;
   }
 }
  .u-footer {
