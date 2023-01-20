@@ -1,0 +1,228 @@
+<html>
+  <head>
+    <title>Se Arrienda</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+/* Estilos para la galer�a */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.gallery-item {
+  width: 300px;
+  margin: 10px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 767px) {
+  .gallery-item {
+    width: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 479px) {
+  .gallery-item {
+    width: 100%;
+  }
+}
+
+.gallery-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  background-image: url(https://nacionanime.com/wp-content/uploads/2022/01/11-gifs-perfectos-de-Violet-Evergarden.gif);
+}
+
+.gallery-details {
+  padding: 10px;
+}
+
+.gallery-title {
+  font-weight: bold;
+  font-size: 1.5em;
+  margin-bottom: 5px;
+  text-align: center;
+  font-family: Arial;
+}
+
+.gallery-description {
+  font-size: 1em;
+  color: #777;
+  text-align: center;
+  font-family: Arial;
+}
+
+.gallery-price {
+  font-size: 1.5em;
+  color: #f00;
+  text-align: center;
+  font-family: Arial;
+}
+
+.call-button {
+  border: none;
+  color: white;
+  padding: -3px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-family: arial;
+  margin: 0px 22%;
+  cursor: pointer;
+}
+
+.whatsapp-button {
+  border: none;
+  color: white;
+  padding: -3px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-family: arial;
+  margin: 0px 2px;
+  cursor: pointer;
+}
+
+</style>
+  </head>
+  <body>
+
+
+
+
+
+<script>
+
+// Crea el botón y establece su estilo
+var button = document.createElement('button');
+button.style.position = 'fixed';
+button.style.bottom = '20px';
+button.style.right = '20px';
+button.style.zIndex = '99';
+button.style.borderRadius = '50%';
+button.style.padding = '1px 8px';
+button.style.fontSize = '24px';
+button.style.color = 'white';
+button.style.backgroundColor = '#2D43E7';
+button.innerHTML = '&#8635;'; // Flecha circular hacia arriba (código de carácter HTML)
+
+// Añade el botón al documento
+document.body.appendChild(button);
+
+// Establece la acción del botón para recargar la página
+button.addEventListener('click', function() {
+  location.reload();
+});
+
+
+
+</script>
+
+    <!-- Container for the gallery -->
+    <div class="gallery">
+    </div>
+
+    <!-- Script to get the data from the Google Sheet -->
+    <script>
+      function getDataFromSheet() {
+        // Replace YOUR_API_KEY with your actual API key
+        var apiKey = 'AIzaSyD5XdmXF34VFAYNKCrTlM8a1uZ3tJeN-Fw';
+
+        // Replace SHEET_ID with the actual ID of your Google Sheet
+        var sheetId = '1TEKMkzEmG5H7xe7-iCtNM54qTtVmQU5KfqmkqGGC_sA';
+
+        // Replace SHEET_NAME with the actual name of the sheet within the Google Sheet
+        // that you want to access
+        var sheetName = 'Sheet1';
+
+        var request = new XMLHttpRequest();
+        request.open('GET', 'https://sheets.googleapis.com/v4/spreadsheets/' + sheetId + '/values/' + sheetName + '?key=' + apiKey, true);
+
+        request.onload = function() {
+          // Access the data here
+          var data = JSON.parse(this.response);
+
+          // Get the gallery element
+          var gallery = document.querySelector('.gallery');
+
+          // Loop through the data and add items to the gallery
+          for (var i = 0; i < data.values.length; i++) {
+            // Create the gallery item element
+            var item = document.createElement('div');
+            item.classList.add('gallery-item');
+
+            // Create the image element
+            var image = document.createElement('img');
+            image.classList.add('gallery-image');
+            image.src = data.values[i][2];
+
+            // Create the details element
+            var details = document.createElement('div');
+            details.classList.add('gallery-details');
+
+            // Create the title element
+            var title = document.createElement('div');
+            title.classList.add('gallery-title');
+            title.textContent = data.values[i][0];
+
+            // Create the description element
+            var description = document.createElement('div');
+            description.classList.add('gallery-description');
+            description.textContent = data.values[i][1];
+
+            
+    // Crear el elemento para mostrar el precio
+    var price = document.createElement('div');
+    price.classList.add('gallery-price');
+    price.innerHTML = data.values[i][3]; // Reemplaza 3 con la columna donde se encuentra el precio en tu hoja de c�lculo
+
+      // Create the call button
+      var callButton = document.createElement('a');
+      callButton.classList.add('call-button');
+      callButton.href = 'tel:' + data.values[i][4];
+      callButton.innerHTML = '<img src="https://images.vexels.com/media/users/3/204667/isolated/lists/0be285c89368fd2d7b0499db071963ef-icono-de-llamada-azul.png" alt="Llamada"  width="52" >';
+      details.appendChild(callButton);
+    
+// Create the WhatsApp button
+var whatsappButton = document.createElement('a');
+whatsappButton.classList.add('whatsapp-button');
+whatsappButton.href = 'https://wa.me/' + data.values[i][5]; // Replace with the actual WhatsApp number
+whatsappButton.innerHTML = '<img src="https://close.marketing/wp-content/uploads/2019/04/whatsapp-icon-logo.png" alt="WhatsApp" class="whatsapp-button" width="50" >';
+details.appendChild(whatsappButton);
+
+
+            // Append the elements to the item
+            item.appendChild(image);
+            item.appendChild(details);
+            details.appendChild(title);
+            details.appendChild(description);
+	    details.appendChild(description);
+    // Agregar el precio al elemento de detalles
+    details.appendChild(price);
+
+    // Agregar el bot�n de llamada al elemento de detalles
+    details.appendChild(callButton);
+
+    // Agregar el bot�n de WhatsApp al elemento de detalles
+    details.appendChild(whatsappButton);
+	    
+
+
+
+
+            // Append the item to the gallery
+            gallery.appendChild(item);
+          }
+        }
+
+        request.send();
+      }
+
+      // Call the function to get the data when the page loads
+      getDataFromSheet();
+    </script>
+  </body>
+</html>

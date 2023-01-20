@@ -1,0 +1,129 @@
+﻿<html><head>
+    <title>Se Arrienda</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+  </head>
+  <body>
+
+
+<link rel="stylesheet" href="style.css">
+
+
+
+
+    <!-- Container for the gallery -->
+    
+    <div class="gallery-item"><img class="gallery-image" src="https://drive.google.com/uc?id=1wcbNKAdbVZe0-EU5fmFGe2NiFZHUGAcW"><div class="gallery-details"><div class="gallery-title">Parte Uno</div><div class="gallery-description">Padre Nuestro, que estás en el cielo,
+santificado sea tu nombre;
+venga a nosotros tu reino;
+hágase tu voluntad, en la tierra como en el cielo.
+
+Danos hoy nuestro pan de cada día;
+perdona nuestras ofensas,
+como también nosotros perdonamos a los que nos ofenden;
+no nos dejes caer en la tentación,
+y líbranos del mal.
+Amén.</div><div class="gallery-price"></div><a class="call-button" href="tel:1"><img src="https://images.vexels.com/media/users/3/204667/isolated/lists/0be285c89368fd2d7b0499db071963ef-icono-de-llamada-azul.png" alt="Llamada" width="52"></a><a class="whatsapp-button" href="https://wa.me/2"><img src="https://close.marketing/wp-content/uploads/2019/04/whatsapp-icon-logo.png" alt="WhatsApp" class="whatsapp-button" width="50"></a></div></div></div>
+
+    <!-- Script to get the data from the Google Sheet -->
+    <script>
+      function getDataFromSheet() {
+        // Replace YOUR_API_KEY with your actual API key
+        var apiKey = 'AIzaSyD5XdmXF34VFAYNKCrTlM8a1uZ3tJeN-Fw';
+
+        // Replace SHEET_ID with the actual ID of your Google Sheet
+        var sheetId = '1TEKMkzEmG5H7xe7-iCtNM54qTtVmQU5KfqmkqGGC_sA';
+
+        // Replace SHEET_NAME with the actual name of the sheet within the Google Sheet
+        // that you want to access
+        var sheetName = 'Sheet4';
+
+        var request = new XMLHttpRequest();
+        request.open('GET', 'https://sheets.googleapis.com/v4/spreadsheets/' + sheetId + '/values/' + sheetName + '?key=' + apiKey, true);
+
+        request.onload = function() {
+          // Access the data here
+          var data = JSON.parse(this.response);
+
+          // Get the gallery element
+          var gallery = document.querySelector('.gallery');
+
+          // Loop through the data and add items to the gallery
+          for (var i = 0; i < data.values.length; i++) {
+            // Create the gallery item element
+            var item = document.createElement('div');
+            item.classList.add('gallery-item');
+
+            // Create the image element
+            var image = document.createElement('img');
+            image.classList.add('gallery-image');
+            image.src = data.values[i][2];
+
+            // Create the details element
+            var details = document.createElement('div');
+            details.classList.add('gallery-details');
+
+            // Create the title element
+            var title = document.createElement('div');
+            title.classList.add('gallery-title');
+            title.textContent = data.values[i][0];
+
+            // Create the description element
+            var description = document.createElement('div');
+            description.classList.add('gallery-description');
+            description.textContent = data.values[i][1];
+
+            
+    // Crear el elemento para mostrar el precio
+    var price = document.createElement('div');
+    price.classList.add('gallery-price');
+    price.innerHTML = data.values[i][3]; // Reemplaza 3 con la columna donde se encuentra el precio en tu hoja de c?lculo
+
+      // Create the call button
+      var callButton = document.createElement('a');
+      callButton.classList.add('call-button');
+      callButton.href = 'tel:' + data.values[i][4];
+      callButton.innerHTML = '<img src="https://images.vexels.com/media/users/3/204667/isolated/lists/0be285c89368fd2d7b0499db071963ef-icono-de-llamada-azul.png" alt="Llamada"  width="52" >';
+      details.appendChild(callButton);
+    
+// Create the WhatsApp button
+var whatsappButton = document.createElement('a');
+whatsappButton.classList.add('whatsapp-button');
+whatsappButton.href = 'https://wa.me/' + data.values[i][5]; // Replace with the actual WhatsApp number
+whatsappButton.innerHTML = '<img src="https://close.marketing/wp-content/uploads/2019/04/whatsapp-icon-logo.png" alt="WhatsApp" class="whatsapp-button" width="50" >';
+details.appendChild(whatsappButton);
+
+
+            // Append the elements to the item
+            item.appendChild(image);
+            item.appendChild(details);
+            details.appendChild(title);
+            details.appendChild(description);
+	    details.appendChild(description);
+    // Agregar el precio al elemento de detalles
+    details.appendChild(price);
+
+    // Agregar el bot?n de llamada al elemento de detalles
+    details.appendChild(callButton);
+
+    // Agregar el bot?n de WhatsApp al elemento de detalles
+    details.appendChild(whatsappButton);
+	    
+
+
+
+
+            // Append the item to the gallery
+            gallery.appendChild(item);
+          }
+        }
+
+        request.send();
+      }
+
+      // Call the function to get the data when the page loads
+      getDataFromSheet();
+    </script>
+  
+
+</body></html>

@@ -1,0 +1,104 @@
+/* Estilos para la galer?a */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 25px;
+}
+
+.gallery-item {
+  width: 327px;
+  border-radius: 7%;
+  margin: 4px;
+  box-shadow: 8px 2px 14px rgb(0 0 0 / 20%);
+}
+
+@media (max-width: 767px) {
+  .gallery-item {
+    width: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 479px) {
+  .gallery-item {
+    width: 100%;
+    max-width: 350px;
+    height: 100;
+    border-radius: 25px;
+  }
+}
+
+.gallery-image {
+  width: 35%;
+  max-width: 130px;
+  height: 95px;
+  margin-left: 3px;
+  border-radius: 25px;
+  margin-top: 2px;
+  object-fit: cover;
+  position: absolute;
+}
+
+.gallery-details {
+  padding: 10px;
+  border-radius: 69%;
+}
+
+.gallery-title {
+  font-weight: bold;
+  font-size: 1.2em;
+  margin-bottom: 5px;
+  font-family: Arial;
+  margin-right: 7px;
+  margin-left: 40%;
+  text-align: center;
+  color: firebrick;
+}
+
+.gallery-description {
+  font-size: 1em;
+  color: #777;
+  font-family: Arial;
+  margin-left: 40%;
+  text-align: center;
+  margin-bottom: 7px;
+}
+
+.gallery-price {
+  font-size: 1.5em;
+  color: #f00;
+  text-align: center;
+  font-family: Arial;
+}
+
+.call-button {
+  border: none;
+  color: white;
+  width: 58px;
+  padding: -3px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-family: arial;
+  margin-left: 51%;
+  cursor: pointer;
+}
+
+.whatsapp-button {
+  border: none;
+  color: white;
+  padding: -3px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-family: arial;
+  margin: 0px 2px;
+  cursor: pointer;
+}
+
+
+
+
+
+
