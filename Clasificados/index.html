@@ -161,7 +161,7 @@ button.addEventListener('click', function() {
         var sheetId = '1TEKMkzEmG5H7xe7-iCtNM54qTtVmQU5KfqmkqGGC_sA';
         // Replace SHEET_NAME with the actual name of the sheet within the Google Sheet
         // that you want to access
-        var sheetName = 'Sheet1';
+        var sheetName = 'Clasificados';
         var request = new XMLHttpRequest();
         request.open('GET', 'https://sheets.googleapis.com/v4/spreadsheets/' + sheetId + '/values/' + sheetName + '?key=' + apiKey, true);
         request.onload = function() {
