@@ -1,38 +1,143 @@
 ﻿<html>
   <head>
-    <title>Tarjeta de Presentación</title>
+    <title>Se Arrienda</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+/* Estilos para la galer�a */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+}
 
+.gallery-item {
+  width: 300px;
+  margin: 10px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 767px) {
+  .gallery-item {
+    width: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 479px) {
+  .gallery-item {
+    width: 100%;
+  }
+}
+
+.gallery-image {
+  width: 100%;
+  height: 40px;
+  object-fit: cover;
+  background-image: url(https://nacionanime.com/wp-content/uploads/2022/01/11-gifs-perfectos-de-Violet-Evergarden.gif);
+}
+
+.gallery-details {
+  padding: 10px;
+}
+
+.gallery-title {
+  font-weight: bold;
+  font-size: 1.5em;
+  margin-bottom: 5px;
+  text-align: center;
+  font-family: Arial;
+}
+
+.gallery-description {
+  font-size: 1em;
+  color: #777;
+  text-align: center;
+  font-family: Arial;
+  margin-bottom: 10px;
+}
+
+.gallery-price {
+  font-size: 1.5em;
+  color: #f00;
+  text-align: center;
+  font-family: Arial;
+}
+
+.call-button {
+  border: none;
+  color: white;
+  padding: -3px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-family: arial;
+  margin: 0px 22%;
+  cursor: pointer;
+}
+
+.whatsapp-button {
+  border: none;
+  color: white;
+  padding: -3px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-family: arial;
+  margin: 0px 2px;
+  cursor: pointer;
+}
+
+</style>
   </head>
-  <body style="
-    margin-top: 0px;
-    margin-left: 0px;
-    margin-right: 0px;
-    margin-bottom: 0px;
-">
-
-
-<link rel="stylesheet" href="style.css">
+  <body>
 
 
 
+
+
+<script>
+
+// Crea el botón y establece su estilo
+var button = document.createElement('button');
+button.style.position = 'fixed';
+button.style.bottom = '20px';
+button.style.right = '20px';
+button.style.zIndex = '99';
+button.style.borderRadius = '50%';
+button.style.padding = '1px 8px';
+button.style.fontSize = '24px';
+button.style.color = 'white';
+button.style.backgroundColor = '#2D43E7';
+button.innerHTML = '&#8635;'; // Flecha circular hacia arriba (código de carácter HTML)
+
+// Añade el botón al documento
+document.body.appendChild(button);
+
+// Establece la acción del botón para recargar la página
+button.addEventListener('click', function() {
+  location.reload();
+});
+
+
+
+</script>
 
     <!-- Container for the gallery -->
-    <div class="gallery" style="height: 100%;">
+    <div class="gallery">
     </div>
 
     <!-- Script to get the data from the Google Sheet -->
     <script>
       function getDataFromSheet() {
         // Replace YOUR_API_KEY with your actual API key
-        var apiKey = 'AIzaSyD5XdmXF34VFAYNKCrTlM8a1uZ3tJeN-Fw';
+        var apiKey = 'AIzaSyDBY2qNVA5Z57f57d7yTxE8yGHcNIxbZOA';
 
         // Replace SHEET_ID with the actual ID of your Google Sheet
         var sheetId = '1TEKMkzEmG5H7xe7-iCtNM54qTtVmQU5KfqmkqGGC_sA';
 
         // Replace SHEET_NAME with the actual name of the sheet within the Google Sheet
         // that you want to access
-        var sheetName = 'Tarjeta de Presentación';
+        var sheetName = 'Sheet8';
 
         var request = new XMLHttpRequest();
         request.open('GET', 'https://sheets.googleapis.com/v4/spreadsheets/' + sheetId + '/values/' + sheetName + '?key=' + apiKey, true);
@@ -53,7 +158,7 @@
             // Create the image element
             var image = document.createElement('img');
             image.classList.add('gallery-image');
-            image.src = data.values[i][2];
+            image.src = 'https://nacionanime.com/wp-content/uploads/2022/01/11-gifs-perfectos-de-Violet-Evergarden.gif';
 
             // Create the details element
             var details = document.createElement('div');
@@ -73,7 +178,7 @@
     // Crear el elemento para mostrar el precio
     var price = document.createElement('div');
     price.classList.add('gallery-price');
-    price.innerHTML = data.values[i][3]; // Reemplaza 3 con la columna donde se encuentra el precio en tu hoja de c?lculo
+    price.innerHTML = data.values[i][3]; // Reemplaza 3 con la columna donde se encuentra el precio en tu hoja de c�lculo
 
       // Create the call button
       var callButton = document.createElement('a');
@@ -82,7 +187,6 @@
       callButton.innerHTML = '<img src="https://images.vexels.com/media/users/3/204667/isolated/lists/0be285c89368fd2d7b0499db071963ef-icono-de-llamada-azul.png" alt="Llamada"  width="52" >';
       details.appendChild(callButton);
     
-
 // Create the WhatsApp button
 var whatsappButton = document.createElement('a');
 whatsappButton.classList.add('whatsapp-button');
@@ -100,11 +204,10 @@ details.appendChild(whatsappButton);
     // Agregar el precio al elemento de detalles
     details.appendChild(price);
 
-    // Agregar el bot?n de llamada al elemento de detalles
+    // Agregar el bot�n de llamada al elemento de detalles
     details.appendChild(callButton);
 
-
-    // Agregar el bot?n de WhatsApp al elemento de detalles
+    // Agregar el bot�n de WhatsApp al elemento de detalles
     details.appendChild(whatsappButton);
 	    
 
