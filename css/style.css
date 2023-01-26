@@ -153,6 +153,7 @@ body{
 
 #searchForm .input-append{
     width: 100%;
+    margin-left: -10;
 }
 
 #searchForm{
