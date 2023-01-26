@@ -38258,7 +38258,7 @@ a.u-link.u-text-hover-grey-90:hover {
 }
 
 .u-header .u-shape-1 {
-  width: 395px;
+  width: 440px;
   height: 75px;
   background-image: none;
   box-shadow: 5px 5px 20px 0 rgba(0,0,0,0.4);
@@ -38313,8 +38313,10 @@ a.u-link.u-text-hover-grey-90:hover {
 
 @media (max-width: 575px) {
   .u-header .u-shape-1 {
+    width: 390px;
     height: 60px;
     margin-top: 0;
+    margin-right: auto;
   }
 
   .u-header .u-shape-2 {
