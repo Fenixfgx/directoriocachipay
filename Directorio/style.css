@@ -1,0 +1,124 @@
+
+/* Estilos para la galer?a */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  background: no-repeat center/200% url("../img/image.png");
+  background-image: url("https://i0.wp.com/www.marcelopedra.com.ar/blog/wp-content/uploads/2013/10/animated-gifs-of-fighting-game-backgrounds-101.gif?fit=800%2C367&ssl=1"),
+                  url("../../media/examples/lizard.png");
+      object-fit: cover;
+    display: block;
+    vertical-align: middle;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+
+    object-fit: cover;
+    display: block;
+    vertical-align: middle;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+
+element.style {
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    padding-right: 20px;
+}
+
+.gallery-item {
+  width: 300px;
+  margin: auto;
+  /* box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2); */
+}
+
+@media (max-width: 767px) {
+  .gallery-item {
+    width: calc(50% - 20px);
+    margin: auto;
+  }
+}
+
+@media (max-width: 479px) {
+  .gallery-item {
+    width: 300px;
+    margin: auto;
+  }
+}
+
+.gallery-image {
+  width: 150;
+  height: 150;
+  margin-left: 20%;
+  margin-top: 61px;
+  margin-bottom: 20px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 5px 5px 20px 0 rgba(0,0,0,0.4);
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-bottom: 20px;
+  padding-right: 20px;
+}
+
+
+
+.gallery-details {
+  padding: 40px;
+  background-color: #e5e5e5;
+  border-radius: 10%;
+  opacity: 0.8;
+}
+
+.gallery-title {
+  font-weight: bold;
+  font-size: 1.5em;
+  margin-top: 7;
+  margin-bottom: 15px;
+  text-align: center;
+  font-family: Arial;
+}
+
+.gallery-description {
+  font-size: 1.2em;
+  color: #000;
+  text-align: center;
+  font-family: Arial;
+  margin-bottom: 20px;
+}
+
+.gallery-price {
+  font-size: 1.5em;
+  color: #f00;
+  text-align: center;
+  font-family: Arial;
+}
+
+.call-button {
+  border: none;
+  color: white;
+  padding: -3px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-family: arial;
+  margin-left: 22%;
+  margin-right: 7%;
+  cursor: pointer;
+}
+
+.whatsapp-button {
+  border: none;
+  color: white;
+  padding: -3px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-family: arial;
+  margin: 0px 2px;
+  cursor: pointer;
+}
