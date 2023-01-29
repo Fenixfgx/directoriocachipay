@@ -18,7 +18,7 @@
     <script type="application/ld+json">{
 		"@context": "http://schema.org",
 		"@type": "Organization",
-		"name": "Arriendos"
+		"name": "arriendo"
 }</script>
     <meta name="theme-color" content="#478ac9">
     <meta property="og:title" content="Casa">
@@ -62,7 +62,7 @@
         </nav>
         <div class="u-palette-1-base u-radius-10 u-shape u-shape-round u-shape-1"></div>
       </div></header>
-    <section class="u-clearfix u-section-1" id="sec-7bb5">
+    <section class="u-clearfix u-section-1" id="sec-dd43">
       <div class="u-clearfix u-sheet u-sheet-1">
         <div class="u-clearfix u-custom-html u-expanded-width u-custom-html-1">
           <title></title>
@@ -91,6 +91,7 @@
   width: 100%;
   height: 200px;
   object-fit: cover;
+  background-image: url(https://fenixfgx.github.io/directoriocachipay/images/logod.png);
 }
 .gallery-details {
   padding: 10px;
@@ -164,7 +165,7 @@ button.addEventListener('click', function() {
         var sheetId = '1TEKMkzEmG5H7xe7-iCtNM54qTtVmQU5KfqmkqGGC_sA';
         // Replace SHEET_NAME with the actual name of the sheet within the Google Sheet
         // that you want to access
-        var sheetName = 'Sheet1';
+        var sheetName = 'ACasa';
         var request = new XMLHttpRequest();
         request.open('GET', 'https://sheets.googleapis.com/v4/spreadsheets/' + sheetId + '/values/' + sheetName + '?key=' + apiKey, true);
         request.onload = function() {
@@ -173,7 +174,7 @@ button.addEventListener('click', function() {
           // Get the gallery element
           var gallery = document.querySelector('.gallery');
           // Loop through the data and add items to the gallery
-          for (var i = 0; i < data.values.length; i++) {
+          for (var i = 1; i < data.values.length; i++) {
             // Create the gallery item element
             var item = document.createElement('div');
             item.classList.add('gallery-item');
@@ -201,14 +202,14 @@ button.addEventListener('click', function() {
       var callButton = document.createElement('a');
       callButton.classList.add('call-button');
       callButton.href = 'tel:' + data.values[i][4];
-      callButton.innerHTML = '<img src="https://images.vexels.com/media/users/3/204667/isolated/lists/0be285c89368fd2d7b0499db071963ef-icono-de-llamada-azul.png" alt="Llamada"  width="52" >';
+      callButton.innerHTML = '<img src="https://fenixfgx.github.io/directoriocachipay/img/Phone.png" alt="Llamada"  width="52" >';
       details.appendChild(callButton);
     
 // Create the WhatsApp button
 var whatsappButton = document.createElement('a');
 whatsappButton.classList.add('whatsapp-button');
 whatsappButton.href = 'https://wa.me/' + data.values[i][5]; // Replace with the actual WhatsApp number
-whatsappButton.innerHTML = '<img src="https://close.marketing/wp-content/uploads/2019/04/whatsapp-icon-logo.png" alt="WhatsApp" class="whatsapp-button" width="50" >';
+whatsappButton.innerHTML = '<img src="https://fenixfgx.github.io/directoriocachipay/img/whaticon.png" alt="WhatsApp" class="whatsapp-button" width="50" >';
 details.appendChild(whatsappButton);
             // Append the elements to the item
             item.appendChild(image);
