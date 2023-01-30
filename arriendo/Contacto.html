@@ -59,6 +59,68 @@
           </div>
         </nav>
         <div class="u-palette-1-base u-radius-10 u-shape u-shape-round u-shape-1"></div>
+        <div class="u-align-center-xs u-clearfix u-custom-html u-custom-html-1">
+          <style> .info-bars-container {
+        display: flex;
+        overflow: hidden;
+        height: 50px;
+        background-color: #f2f2f2;
+      }
+      
+      .info-bar {
+        display: flex;
+        align-items: center;
+        height: 120%;
+        width: 10px;
+        min-width: 100%;
+        animation: move-right infinite 100s linear;
+      }
+      
+      img {
+        height: 40px;
+        margin-right: 10px;
+      }
+       
+      @keyframes move-right {
+        from {
+          transform: translateX(100%);
+        }
+        to {
+          transform: translateX(-2000%);
+        } 
+      } </style>
+          <div id="info-bars-container" class="info-bars-container"></div>
+          <script> // URL de la hoja de cálculo
+      const spreadsheetUrl = `https://sheets.googleapis.com/v4/spreadsheets/1TEKMkzEmG5H7xe7-iCtNM54qTtVmQU5KfqmkqGGC_sA/values/Binformativa?key=AIzaSyD5XdmXF34VFAYNKCrTlM8a1uZ3tJeN-Fw`;
+      
+      // Función para obtener la información de la hoja de cálculo
+      async function getSpreadsheetData() {
+        const response = await fetch(spreadsheetUrl);
+        const data = await response.json();
+        return data.values;
+      }
+      
+      // Muestra la información en la barra
+      async function showInfoBar() {
+        const spreadsheet = await getSpreadsheetData();
+        const infoBarsContainer = document.querySelector('#info-bars-container');
+        let infoBarElements = '';
+        for (let i = 0; i < spreadsheet.length; i++) {
+          const info = spreadsheet[i];
+          infoBarElements += `
+            <div class="info-bar">
+              <img src="${info[0]}" alt="Info bar image">
+              <p>${info[1]}</p>
+            </div>
+          `;
+        }
+        // Duplicar los elementos de la información
+        infoBarElements += infoBarElements;
+        infoBarsContainer.innerHTML = infoBarElements;
+      }
+      
+      showInfoBar(); </script>
+        </div>
       </div></header>
     <section class="u-clearfix u-section-1" id="sec-9545">
       <div class="u-clearfix u-sheet u-sheet-1"></div>
