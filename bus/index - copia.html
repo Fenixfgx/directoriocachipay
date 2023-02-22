@@ -26,15 +26,6 @@
   
 }
 
- #buttoncall {
-  padding: 10px;
-  font-size: 3.8em;
-  width: 20%;
-  background-color: transparent;
-  border: aliceblue;
-  margin-top: -60px;
-}   
-    
 #searchResults {
 max-width: 90%;
 margin: 10px auto;
@@ -219,13 +210,7 @@ function showDetails() {
       <div>
         <h2>${title}</h2>
         <p>${description}</p>
-        <button id="buttoncall" onclick="callNumber('${phone}')">
-  <img src="imagenes/Phone.png" alt="Llamar" width="50" height="50">
-</button>
-
-        <button id="buttoncall" onclick="callNumber('${phone}')">
-  <img src="imagenes/whaticon.png" alt="Llamar" width="50" height="50">
-</button>
+        <button onclick="callNumber('${phone}')">Llamar</button>
       </div>
       <span class="closeButton">&times;</span>
     </div>
