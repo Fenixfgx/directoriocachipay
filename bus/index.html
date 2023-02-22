@@ -1,33 +1,236 @@
-<!DOCTYPE html>
-<html lang="en" >
-<head>
-  <meta charset="UTF-8">
-  <title>CodePen - Buscador Interno</title>
-  <link rel="stylesheet" href="./style.css">
+<img id="logo" src="https://fenixfgx.github.io/directoriocachipay/images/logo.png" alt="Logo">
+<input type="text" id="searchInput" placeholder="Buscar...">
+<div id="searchResults"></div>
+<div id="modal"></div>
+<script src="basedata.js"></script>
 
-</head>
-<body>
-<!-- partial:index.partial.html -->
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Buscador de imágenes</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-  </head>
-  <body>
-    <div id="header">
-  <img id="logo" src="https://fenixfgx.github.io/directoriocachipay/images/logo.png" alt="Logo">
-  <div id="searchContainer">
-      <input type="text" id="searchInput" placeholder="Buscar...">
-      <div id="searchResults"></div>
+<style>
+ body {
+  font-family: Arial, sans-serif;
+}
+    
+#logo {width: 60%;margin-left: 20%;}
+    
+#searchContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#searchInput {
+  padding: 10px;
+  font-size: 3.8em;
+  width: 80%;
+  margin-left: 10%;
+  
+}
+
+#searchResults {
+max-width: 90%;
+margin: 10px auto;
+    margin-right: 5%;
+        margin-left: 5%;
+}
+
+.searchResult {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  cursor: pointer;
+  margin-right: 5%;
+      margin-left: 5%;
+  
+}
+
+.searchResult img {
+  width: 12%;
+  height: 12%;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+.searchResult div {
+  display: flex;
+  flex-direction: column;
+}
+
+.searchResult span {
+  display: block;
+  font-size: 2.8em;
+    font-family: arial;
+}
+
+.description {
+  color: #777;
+  font-size: 14px;
+}
+
+.item {
+  width: 200px;
+  margin: 10px;
+  text-align: center;
+}
+
+.item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.item h2 {
+  margin: 0;
+}
+
+    #modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modalContent {
+  display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 90%;
+    height: 55%;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgb(0 0 0 / 50%);
+    flex-wrap: wrap;
+}
+
+.modalContent img {
+  width: 80%;
+    height: 50%;
+    margin: auto;
+    margin-top: 52px;
+    margin-bottom: -84px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.modalContent div {
+  margin-left: 20px;
+  text-align: center;
+    width: 100%;
+}
+
+.modalContent h2 {
+  font-size: 4em;
+  margin-top: 0;
+    margin-bottom: 5px;
+  text-align: center;
+}
+
+.modalContent p {
+  font-size: 3em;
+  margin-top: 0px;
+  margin-right: 10px;
+  text-align: center;
+}
+
+.modalContent p:last-child {
+  margin-bottom: 0;
+}
+
+.closeButton {
+  position: absolute;
+  top: -18px;
+  right: 10px;
+  font-size: 6em;
+  color: #aaa;
+  cursor: pointer;
+}
+</style>
+
+<script>
+const searchInput = document.getElementById("searchInput");
+const searchResults = document.getElementById("searchResults");
+const modal = document.getElementById("modal");
+
+searchInput.addEventListener("input", search);
+
+function search() {
+  const searchValue = searchInput.value.toLowerCase();
+
+  if (searchValue === "") {
+    searchResults.innerHTML = "";
+    return;
+  }
+
+  let resultsHtml = "";
+
+  database.forEach(item => {
+    if (item.title.toLowerCase().includes(searchValue)) {
+      resultsHtml += `
+        <div class="searchResult" data-title="${item.title}" data-description="${item.description}" data-image="${item.image}" data-phone="${item.phone}">
+          <img src="${item.image}">
+          <div>
+            <span>${item.title}</span>
+            <span class="description">${item.description}</span>
+          </div>
+        </div>
+      `;
+    }
+  });
+
+  if (resultsHtml === "") {
+    resultsHtml = "<div class='noResults'>No se encontraron resultados.</div>";
+  }
+
+  searchResults.innerHTML = resultsHtml;
+
+  const searchResultElements = document.querySelectorAll(".searchResult");
+  searchResultElements.forEach(element => {
+    element.addEventListener("click", showDetails);
+  });
+}
+
+function showDetails() {
+  const title = this.getAttribute("data-title");
+  const description = this.getAttribute("data-description");
+  const image = this.getAttribute("data-image");
+  const phone = this.getAttribute("data-phone");
+
+  const modalHtml = `
+    <div class="modalContent">
+      <img src="${image}">
+      <div>
+        <h2>${title}</h2>
+        <p>${description}</p>
+        <button onclick="callNumber('${phone}')">Llamar</button>
+      </div>
+      <span class="closeButton">&times;</span>
     </div>
-    <div id="modal"></button></div>
-    <script src="script.js"></script>
-  </body>
-</html>
-<!-- partial -->
-  <script  src="./script.js"></script>
+  `;
 
-</body>
-</html>
+  modal.innerHTML = modalHtml;
+
+  const closeButton = modal.querySelector(".closeButton");
+  closeButton.addEventListener("click", hideModal);
+
+  modal.style.display = "block";
+}
+
+function hideModal() {
+  modal.style.display = "none";
+  modal.innerHTML = "";
+}
+
+function callNumber(phone) {
+  window.location.href = `tel:${phone}`;
+}
+
+</script>
