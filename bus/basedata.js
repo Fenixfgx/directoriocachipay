@@ -3,6 +3,6 @@ const database = [
   { title: "Montañas", image: "imagenes/a.jpg", description: "Imagen de unas impresionantes montañas nevadas", phone: "3046234592" },
   { title: "Ciudad", image: "imagenes/d.jpg", description: "Imagen de una animada ciudad de noche", phone: "3046234592" },
   { title: "Bosque", image: "imagenes/e.jpg", description: "Imagen de un frondoso bosque con un arroyo", phone: "3046234592" },
-  { title: "Paramo", image: "imagenes/b.jpg", description: "Imagen de un frondoso paramo con un arroyo", phone: "3046234592" },  
+  { title: "Paramo", image: "imagenes/b.jpg", description: "Imagen de un frondoso paramo con un arroyo", phone: "3046234592"},  
     
 ];
