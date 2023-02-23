@@ -1,0 +1,61 @@
+<html>
+<head>
+  <title>Formulario de Google Sheets</title>
+</head>
+<body>
+  <form id="myForm">
+    <label for="title">Título:</label><br>
+    <input type="text" id="title" name="title"><br>
+    <label for="description">Descripción:</label><br>
+    <textarea id="description" name="description"></textarea><br>
+    <label for="image">Imagen:</label><br>
+    <input type="file" id="image" name="image"><br>
+    <label for="price">Precio:</label><br>
+    <input type="number" id="price" name="price"><br>
+    <label for="phone">Teléfono:</label><br>
+    <input type="tel" id="phone" name="phone"><br>
+    <label for="whatsapp">WhatsApp:</label><br>
+    <input type="tel" id="whatsapp" name="whatsapp"><br>
+    <br>
+    <input type="button" value="Enviar" onclick="submitForm()">
+  </form> 
+
+    <script>
+    // Envía los datos del formulario a la hoja de cálculo usando la API de Google Sheets
+    function submitForm() {
+      // Obtén los datos del formulario
+      var formData = new FormData(document.getElementById("myForm"));
+
+      // Envía los datos del formulario a la hoja de cálculo usando la API de Google Sheets
+      var apiKey = "AIzaSyDBY2qNVA5Z57f57d7yTxE8yGHcNIxbZOA";
+      var sheetId = "1Z-A-W2g-6opbp9ktXOtivQtOG_rkFeWxrkM42Fa3wfI";
+      var sheetName = "A1";
+      var url = "https://sheets.googleapis.com/v4/spreadsheets/" + sheetId + "/values/" + sheetName + "!A1:append?key=" + apiKey;
+
+      var xhr = new XMLHttpRequest();
+      xhr.open("POST", url);
+      
+      // Agrega un manejador de eventos para el evento "load" del objeto xhr
+      xhr.addEventListener("load", function() {
+        // Si la solicitud tuvo éxito, mostrará un mensaje de éxito
+        console.log("¡Los datos se han enviado con éxito a la hoja de cálculo!");
+      });
+      
+      // Agrega un manejador de eventos para el evento "error" del objeto xhr
+      xhr.addEventListener("error", function() {
+        // Si la solicitud falló, mostrará un mensaje de error
+        console.error("¡Ocurrió un error al enviar los datos a la hoja de cálculo!");
+      });
+      
+      // Intenta enviar los datos del formulario
+      try {
+        xhr.send(formData);
+      } catch (error) {
+        // Si ocurre una excepción, muestra el mensaje de error
+        console.error(error);
+      }
+    }
+  </script>
+
+</body>
+</html>
