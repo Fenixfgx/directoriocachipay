@@ -1,0 +1,234 @@
+.u-section-1 .u-sheet-1 {
+  min-height: 289px;
+}
+
+.u-section-1 .u-gallery-1 {
+  height: 269px;
+  width: 373px;
+  margin: 10px auto 0 0;
+}
+
+.u-section-1 .u-carousel-indicators-1 {
+  position: absolute;
+  width: auto;
+  height: auto;
+  top: auto;
+  bottom: -35px;
+}
+
+.u-section-1 .u-carousel-item-1 {
+  margin-right: 0;
+}
+
+.u-section-1 .u-over-slide-1 {
+  background-image: linear-gradient(0deg, rgba(0,0,0,0.2), rgba(0,0,0,0.2));
+  padding: 30px;
+}
+
+.u-section-1 .u-carousel-item-2 {
+  margin-right: 0;
+}
+
+.u-section-1 .u-over-slide-2 {
+  background-image: linear-gradient(0deg, rgba(0,0,0,0.2), rgba(0,0,0,0.2));
+  padding: 30px;
+}
+
+.u-section-1 .u-carousel-control-1 {
+  position: absolute;
+  left: -81px;
+  width: 40px;
+  height: 40px;
+  right: auto;
+}
+
+.u-section-1 .u-carousel-control-2 {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  left: auto;
+  right: -78px;
+}
+
+.u-section-1 .u-gallery-2 {
+  height: 269px;
+  width: 373px;
+  margin: -269px auto 0;
+}
+
+.u-section-1 .u-carousel-indicators-2 {
+  position: absolute;
+  bottom: 10px;
+}
+
+.u-section-1 .u-carousel-item-3 {
+  margin-right: 0;
+}
+
+.u-section-1 .u-over-slide-3 {
+  background-image: linear-gradient(0deg, rgba(0,0,0,0.2), rgba(0,0,0,0.2));
+  padding: 30px;
+}
+
+.u-section-1 .u-carousel-item-4 {
+  margin-right: 0;
+}
+
+.u-section-1 .u-over-slide-4 {
+  background-image: linear-gradient(0deg, rgba(0,0,0,0.2), rgba(0,0,0,0.2));
+  padding: 30px;
+}
+
+.u-section-1 .u-carousel-control-3 {
+  position: absolute;
+  left: 10px;
+  width: 40px;
+  height: 40px;
+}
+
+.u-section-1 .u-carousel-control-4 {
+  position: absolute;
+  right: 10px;
+  width: 40px;
+  height: 40px;
+}
+
+.u-section-1 .u-gallery-3 {
+  height: 269px;
+  width: 373px;
+  margin: -269px auto 10px 767px;
+}
+
+.u-section-1 .u-carousel-indicators-3 {
+  position: absolute;
+  width: auto;
+  height: auto;
+  top: auto;
+  bottom: -35px;
+}
+
+.u-section-1 .u-carousel-item-5 {
+  margin-right: 0;
+}
+
+.u-section-1 .u-over-slide-5 {
+  background-image: linear-gradient(0deg, rgba(0,0,0,0.2), rgba(0,0,0,0.2));
+  padding: 30px;
+}
+
+.u-section-1 .u-carousel-item-6 {
+  margin-right: 0;
+}
+
+.u-section-1 .u-over-slide-6 {
+  background-image: linear-gradient(0deg, rgba(0,0,0,0.2), rgba(0,0,0,0.2));
+  padding: 30px;
+}
+
+.u-section-1 .u-carousel-control-5 {
+  position: absolute;
+  left: -81px;
+  width: 40px;
+  height: 40px;
+  right: auto;
+}
+
+.u-section-1 .u-carousel-control-6 {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  left: auto;
+  right: -78px;
+}
+
+@media (max-width: 1199px) {
+  .u-section-1 .u-sheet-1 {
+    min-height: 219px;
+  }
+
+  .u-section-1 .u-gallery-1 {
+    height: 200px;
+    width: 288px;
+    margin-left: 20px;
+  }
+
+  .u-section-1 .u-gallery-2 {
+    height: 200px;
+    width: 288px;
+    margin-top: -200px;
+  }
+
+  .u-section-1 .u-gallery-3 {
+    height: 200px;
+    width: 288px;
+    margin-top: -200px;
+    margin-right: 20px;
+    margin-left: auto;
+  }
+}
+
+@media (max-width: 991px) {
+  .u-section-1 .u-sheet-1 {
+    min-height: 200px;
+  }
+
+  .u-section-1 .u-gallery-1 {
+    height: 180px;
+    width: 230px;
+    margin-left: 0;
+  }
+
+  .u-section-1 .u-gallery-2 {
+    height: 180px;
+    width: 230px;
+    margin-top: -180px;
+  }
+
+  .u-section-1 .u-gallery-3 {
+    height: 180px;
+    width: 230px;
+    margin-top: -180px;
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .u-section-1 .u-sheet-1 {
+    min-height: 710px;
+  }
+
+  .u-section-1 .u-gallery-1 {
+    height: 220px;
+    width: 450px;
+    margin-left: auto;
+  }
+
+  .u-section-1 .u-gallery-2 {
+    height: 220px;
+    width: 450px;
+    margin-top: 20px;
+  }
+
+  .u-section-1 .u-gallery-3 {
+    height: 220px;
+    width: 450px;
+    margin-top: 20px;
+    margin-right: auto;
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 575px) {
+  .u-section-1 .u-gallery-1 {
+    width: 340px;
+  }
+
+  .u-section-1 .u-gallery-2 {
+    width: 340px;
+  }
+
+  .u-section-1 .u-gallery-3 {
+    width: 340px;
+    margin-right: 20px;
+  }
+}
