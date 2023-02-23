@@ -269,6 +269,7 @@ const modal = document.getElementById("modal");
 searchInput.addEventListener("input", search);
 
 function search() {
+    
   const searchValue = searchInput.value.toLowerCase();
 
   if (searchValue === "") {
@@ -279,7 +280,10 @@ function search() {
   let resultsHtml = "";
 
   database.forEach(item => {
-    if (item.title.toLowerCase().includes(searchValue)) {
+    const keywords = item.keywords || [];
+    const matchedKeywords = keywords.filter(keyword => keyword.toLowerCase().includes(searchValue));
+
+    if (item.title.toLowerCase().includes(searchValue) || item.description.toLowerCase().includes(searchValue) || matchedKeywords.length > 0) {
       resultsHtml += `
         <div class="searchResult" data-title="${item.title}" data-description="${item.description}" data-image="${item.image}" data-phone="${item.phone}">
           <img src="${item.image}">
@@ -347,5 +351,6 @@ function hideModal() {
 function callNumber(phone) {
   window.location.href = `tel:${phone}`;
 }
+
 
 </script>
