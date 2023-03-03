@@ -1,16 +1,20 @@
-var swiper = new Swiper(".mySwiper", {
-  navigation: {
-    nextEl: ".swiper-next-button",
-    prevEl: ".swiper-prev-button" },
+const buttons = document.querySelectorAll(".card-buttons button");
+const sections = document.querySelectorAll(".card-section");
+const card = document.querySelector(".card");
 
-  effect: "fade",
-  loop: "infinite",
-  pagination: {
-    el: ".swiper-pagination",
-    type: "fraction" } });
+const handleButtonClick = e => {
+  const targetSection = e.target.getAttribute("data-section");
+  const section = document.querySelector(targetSection);
+  targetSection !== "#about" ?
+  card.classList.add("is-active") :
+  card.classList.remove("is-active");
+  card.setAttribute("data-state", targetSection);
+  sections.forEach(s => s.classList.remove("is-active"));
+  buttons.forEach(b => b.classList.remove("is-active"));
+  e.target.classList.add("is-active");
+  section.classList.add("is-active");
+};
 
-
-
-swiper.on('slideChange', function (sld) {
-  document.body.setAttribute('data-sld', sld.realIndex);
+buttons.forEach(btn => {
+  btn.addEventListener("click", handleButtonClick);
 });

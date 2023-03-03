@@ -2,175 +2,95 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>CodePen - Product Showcase UI</title>
+  <title>CodePen - Profile Card UI</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-<link rel='stylesheet' href='https://unpkg.com/swiper/swiper-bundle.min.css'><link rel="stylesheet" href="./style.css">
+<link rel="stylesheet" href="./style.css">
 
 </head>
 <body>
 <!-- partial:index.partial.html -->
-<div class="container">
-	<div class="header">
-		<a class="menu-icon" href="#">
-			<svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-				<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
-			</svg>
-		</a>
-		<img class="logo" src="https://cdn.shopify.com/s/files/1/0689/1443/files/CLOSCA-LOGO-WEB-BLACK_130x@2x.png?v=1559116993" />
-		<div class="header-menu">
-			<a href="#">Mask</a>
-			<a href="#">Helmet</a>
-			<a href="#">Bottle</a>
-			<a href="#">Accessories</a>
-		</div>
-		<div class="header-icons">
-			<svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-				<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-			</svg>
-			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-				<path d="M437.02 330.98c-27.883-27.882-61.071-48.523-97.281-61.018C378.521 243.251 404 198.548 404 148 404 66.393 337.607 0 256 0S108 66.393 108 148c0 50.548 25.479 95.251 64.262 121.962-36.21 12.495-69.398 33.136-97.281 61.018C26.629 379.333 0 443.62 0 512h40c0-119.103 96.897-216 216-216s216 96.897 216 216h40c0-68.38-26.629-132.667-74.98-181.02zM256 256c-59.551 0-108-48.448-108-108S196.449 40 256 40s108 48.448 108 108-48.449 108-108 108z" />
-			</svg>
-			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 208.955 208.955">
-				<path d="M190.85 200.227L178.135 58.626a7.5 7.5 0 00-7.47-6.829h-26.221V39.971c0-22.04-17.93-39.971-39.969-39.971-22.038 0-39.966 17.931-39.966 39.971v11.826H38.27a7.5 7.5 0 00-7.47 6.829L18.035 200.784a7.5 7.5 0 007.47 8.17h157.946a7.5 7.5 0 007.399-8.727zM79.509 39.971c0-13.769 11.2-24.971 24.967-24.971 13.768 0 24.969 11.202 24.969 24.971v11.826H79.509V39.971zm-45.8 153.984L45.127 66.797h19.382v13.412a7.5 7.5 0 007.5 7.5 7.5 7.5 0 007.5-7.5V66.797h49.936v13.412a7.5 7.5 0 007.5 7.5 7.5 7.5 0 007.5-7.5V66.797h19.364l11.418 127.158H33.709z" />
-			</svg>
-		</div>
-	</div>
-	<div class="mySwiper">
-		<div class="main-wrapper swiper-wrapper">
-			<div class="main swiper-slide" id="beach">
-				<div class="left-side">
-					<div class="main-wrapper">
-						<h3 class="main-header">Closca Bottle</h3>
-						<h1 class="main-title">Beach</h1>
-						<h2 class="main-subtitle">€ 39.90</h2>
-					</div>
-					<div class="main-content">
-						<div class="main-content__title">In 20 years, there could be more plastic in our oceans than fish.</div>
-						<div class="main-content__subtitle">Plastic pollution injures more than 100.000 marine animals every year.It takes around 450 years for one plastic bottle to decompose.</div>
-						<div class="more-menu">
-							Shop Now
-							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="1.7" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-								<path stroke="none" d="M0 0h24v24H0z" fill="none" />
-								<line x1="-5" y1="12" x2="19" y2="12" />
-								<line x1="15" y1="16" x2="19" y2="12" />
-								<line x1="15" y1="8" x2="19" y2="12" />
-							</svg>
-						</div>
-					</div>
-				</div>
-				<div class="center">
-					<div class="right-side__img">
-						<img class="bottle-bg" src="https://cdn.shopify.com/s/files/1/0689/1443/t/34/assets/Beach_1920.jpg?v=1029210661698833530" alt="">
-						<img class="bottle-img" src="https://cdn.shopify.com/s/files/1/0689/1443/t/34/assets/bottle_beach.png?v=11784267851598469514" />
-					</div>
-				</div>
-			</div>
-			<div class="main swiper-slide" id="savanna">
-				<div class="left-side">
-					<div class="main-wrapper">
-						<h3 class="main-header">Closca Bottle</h3>
-						<h1 class="main-title">Savanna</h1>
-						<h2 class="main-subtitle">€ 39.90</h2>
-					</div>
-					<div class="main-content">
-						<div class="main-content__title">The Earth’s area affected by desertification is approx 11 times India’s size.
-						</div>
-						<div class="main-content__subtitle">The Savannas act as a carbon sink, absorbing CO2 from the atmosphere and helping to maintain the balance of global temperatures.</div>
-						<div class="more-menu">
-							Shop Now
-							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="1.7" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-								<path stroke="none" d="M0 0h24v24H0z" fill="none" />
-								<line x1="-5" y1="12" x2="19" y2="12" />
-								<line x1="15" y1="16" x2="19" y2="12" />
-								<line x1="15" y1="8" x2="19" y2="12" />
-							</svg>
-						</div>
-					</div>
-				</div>
-				<div class="center">
-					<div class="right-side__img">
-						<img class="bottle-bg" src="https://images.unsplash.com/photo-1613109526778-27605f1f27d2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80" alt="">
-						<img class="bottle-img" src="https://cdn.shopify.com/s/files/1/0689/1443/t/34/assets/savanna_OK.png?v=4783820813181844557" />
-					</div>
-				</div>
-			</div>
-			<div class="main swiper-slide" id="glacier">
-				<div class="left-side">
-					<div class="main-wrapper">
-						<h3 class="main-header">Closca Bottle</h3>
-						<h1 class="main-title">Glacier</h1>
-						<h2 class="main-subtitle">€ 39.90</h2>
-					</div>
-					<div class="main-content">
-						<div class="main-content__title">Glaciers contain 75% of the World's freshwater.
-						</div>
-						<div class="main-content__subtitle">The effects of melting ice glaciers are biodiversity loss, the rising of the sea level and the deficiency of freshwater, among others.</div>
-						<div class="more-menu">
-							Shop Now
-							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="1.7" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-								<path stroke="none" d="M0 0h24v24H0z" fill="none" />
-								<line x1="-5" y1="12" x2="19" y2="12" />
-								<line x1="15" y1="16" x2="19" y2="12" />
-								<line x1="15" y1="8" x2="19" y2="12" />
-							</svg>
-						</div>
-					</div>
-				</div>
-				<div class="center">
-					<div class="right-side__img">
-						<img class="bottle-bg" src="https://www.discover-the-world.com/app/uploads/2018/05/chile-patagonia-calving-glacier-is-1150x863-c-default.jpg" alt="">
-						<img class="bottle-img" src="https://cdn.shopify.com/s/files/1/0689/1443/t/34/assets/Glacier_OK.png?v=7185877315400411030" />
-					</div>
-				</div>
-			</div>
-			<div class="main swiper-slide" id="coral">
-				<div class="left-side">
-					<div class="main-wrapper">
-						<h3 class="main-header">Closca Bottle</h3>
-						<h1 class="main-title">Coral</h1>
-						<h2 class="main-subtitle">€ 39.90</h2>
-					</div>
-					<div class="main-content">
-						<div class="main-content__title">We will have lost 60% of our coral reefs by 2030.
-						</div>
-						<div class="main-content__subtitle">Coral reefs are essential to humans, as they protect the shorelines and are a source of
-							nutrients and habitat for thousands of marine species.</div>
-						<div class="more-menu">
-							Shop Now
-							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="1.7" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-								<path stroke="none" d="M0 0h24v24H0z" fill="none" />
-								<line x1="-5" y1="12" x2="19" y2="12" />
-								<line x1="15" y1="16" x2="19" y2="12" />
-								<line x1="15" y1="8" x2="19" y2="12" />
-							</svg>
-						</div>
-					</div>
-				</div>
-				<div class="center">
-					<div class="right-side__img">
-						<img class="bottle-bg" src="https://images.unsplash.com/photo-1546500840-ae38253aba9b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=3260&q=80" alt="">
-						<img class="bottle-img" src="https://cdn.shopify.com/s/files/1/0689/1443/t/34/assets/Coral_OK.png?v=14596995446202437119" />
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="button-wrapper">
-		<div class="swiper-button swiper-prev-button">
-			<svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-				<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-			</svg>
-		</div>
-		<div class="swiper-button swiper-next-button">
-			<svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-				<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-			</svg>
-		</div>
-	</div>
-	<div class="swiper-pagination"></div>
+<div class="card" data-state="#about">
+  <div class="card-header">
+    <div class="card-cover" style="background-image: url('https://images.unsplash.com/photo-1549068106-b024baf5062d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80')"></div>
+    <img class="card-avatar" src="https://images.unsplash.com/photo-1549068106-b024baf5062d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80" alt="avatar" />
+    <h1 class="card-fullname">William Rocheald</h1>
+    <h2 class="card-jobtitle">UI Developer</h2>
+  </div>
+  <div class="card-main">
+    <div class="card-section is-active" id="about">
+      <div class="card-content">
+        <div class="card-subtitle">ABOUT</div>
+        <p class="card-desc">Whatever tattooed stumptown art party sriracha gentrify hashtag intelligentsia readymade schlitz brooklyn disrupt.
+        </p>
+      </div>
+      <div class="card-social">
+        <a href="#"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M15.997 3.985h2.191V.169C17.81.117 16.51 0 14.996 0c-3.159 0-5.323 1.987-5.323 5.639V9H6.187v4.266h3.486V24h4.274V13.267h3.345l.531-4.266h-3.877V6.062c.001-1.233.333-2.077 2.051-2.077z" /></svg></a>
+        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+            <path d="M512 97.248c-19.04 8.352-39.328 13.888-60.48 16.576 21.76-12.992 38.368-33.408 46.176-58.016-20.288 12.096-42.688 20.64-66.56 25.408C411.872 60.704 384.416 48 354.464 48c-58.112 0-104.896 47.168-104.896 104.992 0 8.32.704 16.32 2.432 23.936-87.264-4.256-164.48-46.08-216.352-109.792-9.056 15.712-14.368 33.696-14.368 53.056 0 36.352 18.72 68.576 46.624 87.232-16.864-.32-33.408-5.216-47.424-12.928v1.152c0 51.008 36.384 93.376 84.096 103.136-8.544 2.336-17.856 3.456-27.52 3.456-6.72 0-13.504-.384-19.872-1.792 13.6 41.568 52.192 72.128 98.08 73.12-35.712 27.936-81.056 44.768-130.144 44.768-8.608 0-16.864-.384-25.12-1.44C46.496 446.88 101.6 464 161.024 464c193.152 0 298.752-160 298.752-298.688 0-4.64-.16-9.12-.384-13.568 20.832-14.784 38.336-33.248 52.608-54.496z" /></svg></a>
+        <a href="#"><svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+            <path d="M301 256c0 24.852-20.148 45-45 45s-45-20.148-45-45 20.148-45 45-45 45 20.148 45 45zm0 0" />
+            <path d="M332 120H180c-33.086 0-60 26.914-60 60v152c0 33.086 26.914 60 60 60h152c33.086 0 60-26.914 60-60V180c0-33.086-26.914-60-60-60zm-76 211c-41.355 0-75-33.645-75-75s33.645-75 75-75 75 33.645 75 75-33.645 75-75 75zm86-146c-8.285 0-15-6.715-15-15s6.715-15 15-15 15 6.715 15 15-6.715 15-15 15zm0 0" />
+            <path d="M377 0H135C60.562 0 0 60.563 0 135v242c0 74.438 60.563 135 135 135h242c74.438 0 135-60.563 135-135V135C512 60.562 451.437 0 377 0zm45 332c0 49.625-40.375 90-90 90H180c-49.625 0-90-40.375-90-90V180c0-49.625 40.375-90 90-90h152c49.625 0 90 40.375 90 90zm0 0" /></svg></a>
+        <a href="#"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M23.994 24v-.001H24v-8.802c0-4.306-.927-7.623-5.961-7.623-2.42 0-4.044 1.328-4.707 2.587h-.07V7.976H8.489v16.023h4.97v-7.934c0-2.089.396-4.109 2.983-4.109 2.549 0 2.587 2.384 2.587 4.243V24zM.396 7.977h4.976V24H.396zM2.882 0C1.291 0 0 1.291 0 2.882s1.291 2.909 2.882 2.909 2.882-1.318 2.882-2.909A2.884 2.884 0 002.882 0z" /></svg></a>
+      </div>
+    </div>
+    <div class="card-section" id="experience">
+      <div class="card-content">
+        <div class="card-subtitle">WORK EXPERIENCE</div>
+        <div class="card-timeline">
+          <div class="card-item" data-year="2014">
+            <div class="card-item-title">Front-end Developer at <span>JotForm</span></div>
+            <div class="card-item-desc">Disrupt stumptown retro everyday carry unicorn.</div>
+          </div>
+          <div class="card-item" data-year="2016">
+            <div class="card-item-title">UI Developer at <span>GitHub</span></div>
+            <div class="card-item-desc">Developed new conversion funnels and disrupt.</div>
+          </div>
+          <div class="card-item" data-year="2018">
+            <div class="card-item-title">Illustrator at <span>Google</span></div>
+            <div class="card-item-desc">Onboarding illustrations for App.</div>
+          </div>
+          <div class="card-item" data-year="2020">
+            <div class="card-item-title">Full-Stack Developer at <span>CodePen</span></div>
+            <div class="card-item-desc">Responsible for the encomposing brand expreience.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-section" id="contact">
+      <div class="card-content">
+        <div class="card-subtitle">CONTACT</div>
+        <div class="card-contact-wrapper">
+          <div class="card-contact">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
+              <circle cx="12" cy="10" r="3" /></svg>
+            Algonquin Rd, Three Oaks Vintage, MI, 49128
+          </div>
+          <div class="card-contact">
+            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" /></svg>(269) 756-9809</div>
+          <div class="card-contact">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+              <path d="M22 6l-10 7L2 6" /></svg>
+            william@rocheald.com
+          </div>
+          <button class="contact-me">WORK TOGETHER</button>
+        </div>
+      </div>
+    </div>
+    <div class="card-buttons">
+      <button data-section="#about" class="is-active">ABOUT</button>
+      <button data-section="#experience">EXPERIENCE</button>
+      <button data-section="#contact">CONTACT</button>
+    </div>
+  </div>
 </div>
 <!-- partial -->
-  <script src='https://unpkg.com/swiper/swiper-bundle.min.js'></script><script  src="./script.js"></script>
+  <script  src="./script.js"></script>
 
 </body>
 </html>
