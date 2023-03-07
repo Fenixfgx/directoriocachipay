@@ -38468,6 +38468,10 @@ a.u-link.u-text-hover-grey-90:hover {
   margin: 38px auto 0;
 }
 
+.u-header .u-btn-1 {
+  background-image: none;
+}
+
 .u-header .u-shape-1 {
   background-image: none;
   margin-top: -12px;
@@ -38562,6 +38566,10 @@ a.u-link.u-text-hover-grey-90:hover {
 
   .u-header .u-nav-2 {
     margin: 20px 0 0;
+  }
+
+  .u-header .u-btn-1 {
+    padding: 0;
   }
 
   .u-header .u-shape-1 {
