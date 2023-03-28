@@ -42,7 +42,376 @@
 			flex-direction: column;
 			align-items: center;
 			justify-content: center;
-			color: #333333;<!DOCTYPE html><!DOCTYPE html>
+			color: #333333;<!DOCTYPE html><!DOCTYPE html><!DOCTYPE html>
+<html>
+<head>
+	<title>Neomorphic Botones</title>
+	<style>
+		body2 {
+			
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			margin: 0;
+			font-family: Arial, sans-serif;
+		}
+	
+		.containera {
+			display: flex;
+			flex-direction: row;
+			background-color: #fbfbfb;
+			overflow: hidden;
+			cursor: pointer;
+			border: none;
+      border-radius: 20px;
+		}
+    
+    .containerPS {
+			display: flex;
+			flex-direction: row;
+			background-color: #e0e0e0;
+			box-shadow: 10px 10px 30px #cfcfcf, 
+						-10px -10px 30px #ffffff;
+			border-radius: 30px;
+			overflow: hidden;
+			cursor: pointer;
+			border: none;
+		}
+
+		.column {
+			flex-basis: 50%;
+			padding: 80px 20px;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			color: #333333;
+			font-size: 24px;
+			font-weight: bold;
+			border-right: 1px solid #cfcfcf;
+		}
+
+		.column:hover {
+			background-color: #d5d5d5;
+			box-shadow: inset 5px 5px 10px #cfcfcf, 
+						inset -5px -5px 10px #ffffff;
+			border: none;
+		}
+
+		.column:first-child {
+			border-left: 1px solid #cfcfcf;
+		}
+
+		.logoa {
+			height: 80px;
+			width: 80px;
+			margin-bottom: 20px;
+			background-color: #e0e0e0;
+			box-shadow: 10px 10px 30px #cfcfcf, 
+						-10px -10px 30px #ffffff;
+			border-radius: 50%;
+			padding: 10px;
+			position: relative;
+			overflow: hidden;
+			transform: translate(-5px, -5px);
+		}
+
+		.logo:before {
+			content: "";
+			background-color: #c7c7c7;
+			position: absolute;
+			top: 5px;
+			left: 5px;
+			width: calc(100% - 10px);
+			height: calc(100% - 10px);
+			box-shadow: inset 5px 5px 10px #cfcfcf, 
+						inset -5px -5px 10px #ffffff;
+			border-radius: 50%;
+			z-index: -1;
+		}
+
+		.logoa img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+
+		.title {
+			text-align: center;
+			margin: 0;
+      font-size: 17px;
+		}
+    
+  .content-container {
+  display: none;
+  width: 100%;
+}
+
+.content {
+  background-color: #ffffff;
+    padding: 39px;
+    margin: auto;
+    width: 262px;
+    border-radius: 20px;
+    box-shadow: 10px 10px 30px #cfcfcf, -10px -10px 30px #ffffff;
+    animation-name: expand;
+    animation-duration: 0.5s;
+}
+
+@keyframes expand {
+  from {
+    transform: scale(0.8);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+.back-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #333333;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.back-button:hover {
+  background-color: #555555;
+}
+
+.back-button2 {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #333333;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.back-button2:hover {
+  background-color: #555555;
+}
+
+
+	</style>
+</head>
+<body2>
+  <div class="containera">
+  <div class="column" data-section="#about" id="perfil-seguridad">
+    <div class="logoa">
+      <img id="imagen" class="logoa-image">
+    </div>
+    <h2 class="title">Perfil y Seguridad</h2>
+  </div>
+
+  <div class="column" id="apariencia">
+    <img src="https://logos-download.com/wp-content/uploads/2019/07/Apple_Photos_Logo.png" alt="Logo 2" class="logoa">
+    <h2 class="title">Apariencia</h2>
+  </div>
+</div>
+
+<div class="content-container">
+  <div class="content">
+    <h1 style="text-align:center;margin-top: 0px;">Perfil</h1>
+    <div style="text-align:center;">
+      <img src="" id="imagen2" style="border-radius:50%;width:100px;height:100px;">
+      <h3 id="texto"></h3>
+    </div>
+    <hr style="margin:30px 0;">
+    <div style="text-align:center;">
+      <h2>Seguridad</h2>
+      <button id="btnCambiar" style="background-color:#d8dee9; border:none; border-radius:20px; padding:10px 20px; margin-top:4px;">Cambiar Usuario y Contraseña</button>
+    </div>
+    <button class="back-button" style="margin-top: 23px;
+    margin-left: 31%;">Regresar</button>
+  </div>
+
+  <div class="content" style="display:none;">
+    <h1 style="text-align:center;margin-top: 0px;">Apariencia</h1>
+    <div style="text-align:center;">
+      <img src="" id="imagen3" style="border-radius:50%;width:100px;height:100px;">
+      <h3 id="texto2"></h3>
+    </div>
+    <hr style="margin:30px 0;">
+    <div style="text-align:center;">
+      <h2>Configuración de Apariencia</h2>
+      <button style="background-color:#d8dee9; border:none; border-radius:20px; padding:10px 20px; margin-top:4px;">Cambiar Tema</button>
+    </div>
+    <button class="back-button2" style="margin-top: 23px;
+    margin-left: 31%;">Regresar</button>
+  </div>
+</div> 
+
+ <div class="content" style="display:none;" id="contenedorUser">
+<h2>ACCESO</h2>
+  <form id="login-form">
+    <div class="user-box">
+      <input type="text" name="username" required>
+      <label>Usuario</label>
+    </div>
+    <div class="user-box">
+      <input type="password" name="password" required>
+      <label>Contraseña</label>
+    </div>
+    <button type="submit">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      Ingresar
+    </button>
+  </form>
+</div>
+   
+  <div class="content neomorph" style="display:none; " id="contenedorpass">
+  <h2>Login</h2>
+  <form id="login-form">
+    <div class="user-box">
+      <input type="text" name="username" required>
+      <label>Usuario</label>
+    </div>
+    <div class="user-box">
+      <input type="password" name="password" required>
+      <label>Contraseña</label>
+    </div>
+    <button type="submit">
+      Ingresar
+    </button>
+  </form>
+</div>
+
+  <div class="content" style="display:none;height: 181px;" id="nuevo-contenedor">
+  <iframe id="Example2"
+style="border:none; height: 210px;" src="https://script.google.com/macros/s/AKfycbygLbENXN9MDXzi5GVDLUEp8VdIPAUHkwcN3nbkmkN5NX023j_9P2LBFP3KjGvJ8aKgkw/exec">
+</iframe>
+</div>
+
+  <script src="https://apis.google.com/js/api.js"></script>
+<script>
+  const form = document.getElementById('login-form');
+form.addEventListener('submit', function(event) {
+  event.preventDefault(); // Evita el envío del formulario
+
+  // Autoriza el acceso a la hoja de cálculo
+  gapi.load('client', function() {
+    gapi.client.init({
+      apiKey: 'AIzaSyDBY2qNVA5Z57f57d7yTxE8yGHcNIxbZOA'
+    }).then(function() {
+      return gapi.client.load('sheets', 'v4');
+    }).then(function() {
+      // Obtiene los datos de la hoja de cálculo
+      return gapi.client.sheets.spreadsheets.values.get({
+        spreadsheetId: '1TEKMkzEmG5H7xe7-iCtNM54qTtVmQU5KfqmkqGGC_sA',
+        range: 'LOG!A1:B2'
+      });
+    }).then(function(response) {
+      const data = response.result.values;
+      const username = data[0][0];
+      const password = data[0][1];
+
+      // Aquí debes agregar tu lógica de autenticación.
+      // Por ejemplo:
+      if (form.username.value === username && form.password.value === password) {
+        
+        document.getElementById('nuevo-contenedor').style.display = 'block';
+        document.getElementById('contenedorpass').style.display = 'none';
+        
+      } else {
+        alert('Usuario o contraseña incorrectos. Intenta de nuevo.');
+      }
+    });
+  });
+});
+  </script>
+  
+  <script>
+ const containera = document.querySelector('.containera');
+const contentContainer = document.querySelector('.content-container');
+const content = document.querySelector('.content');
+const backButton = document.querySelector('.back-button');
+const backButton2 = document.querySelector('.back-button2');
+    
+backButton.addEventListener('click', () => {
+  contentContainer.style.display = 'none';
+  containera.style.display = 'flex';
+});
+
+backButton2.addEventListener('click', () => {
+  contentContainer.style.display = 'none';
+  containera.style.display = 'flex';
+});
+    
+   
+const perfilSeguridad = document.querySelector('#perfil-seguridad'); 
+perfilSeguridad.addEventListener('click', function() {
+  containera.style.display = 'none';
+  contentContainer.style.display = 'block';
+  contentContainer.children[0].style.display = 'block';
+  contentContainer.children[1].style.display = 'none';
+});
+
+
+const apariencia = document.querySelector('#apariencia'); 
+apariencia.addEventListener('click', function() {
+  containera.style.display = 'none';
+  contentContainer.style.display = 'block';
+  contentContainer.children[1].style.display = 'block';
+  contentContainer.children[0].style.display = 'none';
+});
+
+    // Obtener el botón "Cambiar Usuario y Contraseña" y el contenedor "user"
+var btnCambiar = document.getElementById("btnCambiar");
+var contenedorUser = document.querySelector('#contenedorUser');
+
+// Añadir un evento click al botón
+btnCambiar.addEventListener("click", function() {
+  // Ocultar el contenedor de perfil y mostrar el de usuario si está oculto
+  if (contenedorUser.style.display === "none") {
+    contentContainer.children[0].style.display = 'none';
+    contentContainer.children[1].style.display = 'none';
+    contenedorUser.style.display = "block";
+  } else {
+    // Ocultar el contenedor de usuario y mostrar el de perfil si está oculto
+    contenedorUser.style.display = "none";
+    contentContainer.children[0].style.display = 'block';
+    contentContainer.children[1].style.display = 'none';
+  }
+});
+
+</script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+ <script>
+      const apiKey = "AIzaSyD5XdmXF34VFAYNKCrTlM8a1uZ3tJeN-Fw";
+      const spreadsheetId = "1TEKMkzEmG5H7xe7-iCtNM54qTtVmQU5KfqmkqGGC_sA";
+      const sheetName = "LOG";
+      const imagenCellAddress = "D1";
+      const textoCellAddress = "a1";
+      
+      $(document).ready(function() {
+        $.ajax({
+          url: `https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}/values/${sheetName}!${imagenCellAddress}:${textoCellAddress}?key=${apiKey}`,
+          dataType: "json",
+          success: function(data) {
+            const imageUrl = data.values[0][2];
+            const imageUrlF = data.values[0][3];
+            const texto = data.values[0][0];
+            $("#imagen").attr("src", imageUrl);
+            $("#imagen2").attr("src", imageUrl);
+            $("#imagen3").attr("src", imageUrlF);
+            $("#texto").text(texto);
+          },
+          error: function(jqXHR, textStatus, errorThrown) {
+            console.log(textStatus, errorThrown);
+          }
+        });
+      });
+    </script>
+  
 <html>
 <head>
 	<title>Neomorphic Botones</title>
