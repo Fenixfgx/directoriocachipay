@@ -42,7 +42,6 @@ document.getElementById('url-form').addEventListener('submit', function(e) {
     .then(data => {
       if (data.status === 'success') {
         Swal.fire('success', 'Registro exitoso:', 'success');
-        console('Registro exitoso: ' + data.message);
       } else if (data.status === 'not_found') {
         alert('No se encontró el valor en la columna D.');
       } else {
