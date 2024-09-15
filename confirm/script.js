@@ -41,7 +41,7 @@ document.getElementById('url-form').addEventListener('submit', function(e) {
     })
     .then(data => {
       if (data.status === 'success') {
-        Swal.fire('USUARIO ACTIVADO', 'Registro exitoso', 'USUARIO ACTIVADO');
+        Swal.fire('success', 'Registro exitoso', 'USUARIO ACTIVADO');
       } else if (data.status === 'not_found') {
         alert('No se encontró el valor en la columna D.');
       } else {
