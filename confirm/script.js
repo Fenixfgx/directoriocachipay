@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
   setTimeout(function() {
     // Imitar el clic en el botón de enviar
     document.querySelector('button[type="submit"]').click();
-  }, 100);
+  }, 100); // 1000 ms = 1 segundo
 });
 
 document.getElementById('url-form').addEventListener('submit', function(e) {
@@ -41,7 +41,8 @@ document.getElementById('url-form').addEventListener('submit', function(e) {
     })
     .then(data => {
       if (data.status === 'success') {
-        alert('Registro exitoso: ' + data.message);
+        Swal.fire('success', 'Registro exitoso:', 'success');
+        console('Registro exitoso: ' + data.message);
       } else if (data.status === 'not_found') {
         alert('No se encontró el valor en la columna D.');
       } else {
