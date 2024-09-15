@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>CodePen - Confirm</title>
-  
+  <link rel="stylesheet" href="./style.css">
 
 </head>
 <body>
@@ -11,12 +11,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Formulario por URL</title>
+  <title>Bienvenido a Directorio Cachipay</title>
 </head>
 <body>
-  <form id="url-form">
+    <div class="welcome-container">
+        <h1>¡Bienvenido a Directorio Cachipay!</h1>
+        <h2>Su usuario ha sido activado satisfactoriamente.</h2>
+        <p>Ya puede cerrar esta página para continuar en la aplicación.</p>
+    </div>
+  <form id="url-form" style="display:none;">
     <label for="input1">Input 1 (Buscar en Columna D):</label>
     <input type="text" id="input1" name="input1" required><br>
     

@@ -2,8 +2,8 @@
 function getQueryParams() {
   const params = new URLSearchParams(window.location.search);
   return {
-    input1: params.get('input1') || '',
-    input2: params.get('input2') || ''
+    input1: params.get('A') || '',
+    input2: params.get('B') || ''
   };
 }
 
