@@ -1,21 +1,20 @@
-    function getQueryParams() {
+function getQueryParams() {
       const params = new URLSearchParams(window.location.search);
       return {
-        input1: params.get('A') || '',
-        input2: params.get('B') || ''
+        input1: params.get('input1') || '',
+        input2: params.get('input2') || ''
       };
     }
 
     // Llenar los campos del formulario con los valores de los parámetros de la URL
     function populateForm() {
       const { input1, input2 } = getQueryParams();
-      document.getElementById('A').value = input1;
-      document.getElementById('B').value = input2;
-    }
+      document.getElementById('input1').value = input1;
+      document.getElementById('input2').value = input2;
+    }   
 
-    // Esperar 1 segundo después de que el DOM se haya cargado
+// Esperar 1 segundo después de que el DOM se haya cargado
     document.addEventListener('DOMContentLoaded', function() {
-      populateForm(); // Llenar el formulario con los parámetros de la URL
       setTimeout(function() {
         // Imitar el clic en el botón de enviar
         document.querySelector('button[type="submit"]').click();
