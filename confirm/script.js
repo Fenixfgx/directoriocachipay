@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
   setTimeout(function() {
     // Imitar el clic en el botón de enviar
     document.querySelector('button[type="submit"]').click();
-  }, 1000); // 1000 ms = 1 segundo
+  }, 100);
 });
 
 document.getElementById('url-form').addEventListener('submit', function(e) {
