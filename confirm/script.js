@@ -30,7 +30,7 @@ document.getElementById('url-form').addEventListener('submit', function(e) {
   const input1 = document.getElementById('input1').value;
   const input2 = document.getElementById('input2').value;
   
-  const url = `https://script.google.com/macros/s/AKfycbw-Ws_1s2s1_gCY949Tcb1UYD2u6sRQUAATK81kC9CnbGNEOCvjMlx_FPz5sW-yJflV/exec?input1=${encodeURIComponent(input1)}&input2=${encodeURIComponent(input2)}`;
+  const url = `https://script.google.com/macros/s/AKfycbyBEv36J8XZG72r4eK5rKd_P6JR40tn-y9BBXOm9q4c_VLWslD2XdlZLhE0d9Khl_Va/exec?input1=${encodeURIComponent(input1)}&input2=${encodeURIComponent(input2)}`;
 
   fetch(url)
     .then(response => {
