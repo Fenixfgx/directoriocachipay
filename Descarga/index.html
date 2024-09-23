@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Directorio Cachipay - Descarga la App</title>
+    <style>
+        :root {
+            --primary-color: #0047AB;
+            --background-color: #ffffff;
+            --text-color: #333;
+            --shadow-color: rgba(0, 0, 0, 0.1);
+            --highlight-color: #ffffff;
+        }
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            background-color: var(--background-color);
+            color: var(--text-color);
+        }
+        .container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+    padding-top: 40px;
+        }
+        header {
+            background-color: var(--background-color);
+            padding: 1rem;
+            box-shadow: 0 4px 6px var(--shadow-color);
+            margin-bottom: 1rem;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .logo img {
+            height: 40px;
+            margin-right: 10px;
+        }
+        .logo h1 {
+            font-size: 1.2rem;
+            margin: 0;
+        }
+        .app-info {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        .app-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 20px;
+            margin-bottom: 1rem;
+            box-shadow: 6px 6px 12px var(--shadow-color), -6px -6px 12px var(--highlight-color);
+        }
+        .app-details h2 {
+            margin: 0 0 0.5rem 0;
+            font-size: 1.5rem;
+            color: var(--primary-color);
+        }
+        .rating {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 0.5rem;
+        }
+        .stars {
+            color: #FFA500;
+            margin-right: 5px;
+        }
+        .btn {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: all 0.3s;
+            box-shadow: 4px 4px 8px var(--shadow-color), -4px -4px 8px var(--highlight-color);
+        }
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 6px 6px 12px var(--shadow-color), -6px -6px 12px var(--highlight-color);
+        }
+        .slider-container {
+            overflow: hidden;
+            margin-bottom: 1rem;
+            border-radius: 10px;
+            box-shadow: 6px 6px 12px var(--shadow-color), -6px -6px 12px var(--highlight-color);
+        }
+        .slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 300%; /* Ajusta el ancho al 300% para mostrar 3 imágenes */
+}
+
+.slider img {
+    width: calc(30% / 3);
+    height: auto;
+    box-shadow: 1px 4px 12px 0 gray;
+    margin-right: 10px;
+    margin-left: 1px;
+    border-radius: 10px;
+}
+
+        .features {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+        .feature {
+            background-color: var(--background-color);
+            padding: 1rem;
+            border-radius: 10px;
+            box-shadow: 6px 6px 12px var(--shadow-color), -6px -6px 12px var(--highlight-color);
+            transition: transform 0.3s;
+        }
+        .feature:hover {
+            transform: translateY(-3px);
+        }
+        .feature img {
+            width: 48px;
+            height: 48px;
+            margin-bottom: 0.5rem;
+        }
+        .feature h3 {
+            margin: 0 0 0.5rem 0;
+            font-size: 1.2rem;
+        }
+        footer {
+            background-color: var(--background-color);
+            color: var(--text-color);
+            text-align: center;
+            padding: 1rem;
+            margin-top: 1rem;
+            box-shadow: 0 -4px 6px var(--shadow-color);
+        }
+        footer a {
+            color: var(--primary-color);
+            margin: 0 0.5rem;
+            text-decoration: none;
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                max-width: 750px;
+            }
+            .app-info {
+                flex-direction: row;
+                text-align: left;
+            }
+            .app-icon {
+                margin-right: 1rem;
+                margin-bottom: 0;
+            }
+            .features {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .container {
+                max-width: 1000px;
+            }
+            .features {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="container">
+        <section class="app-info">
+            <img src="img/DCL.png" alt="Icono de Directorio Cachipay" class="app-icon">
+            <div class="app-details">
+                <h2>Directorio Cachipay</h2>
+                <p>Tu guía completa para explorar y conectar con la comunidad de Cachipay.</p>
+                <a href="#" class="btn" id="descargaBtn">Descargar</a>
+            </div>
+        </section>
+
+        <section class="slider-container">
+            <div class="slider">
+                <img src="img/1.png" alt="Captura de pantalla 1">
+                <img src="img/2.png" alt="Captura de pantalla 2">
+                <img src="img/3.png" alt="Captura de pantalla 3">
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="feature">
+                <img style="display:none;" src="/placeholder.svg?height=48&width=48" alt="Icono de comercio">
+                <h3>Zona Comercial</h3>
+                <p>Explora y apoya a los negocios locales de Cachipay.</p>
+            </div>
+            <div class="feature">
+                <img style="display:none;" src="/placeholder.svg?height=48&width=48" alt="Icono de emergencia">
+                <h3>Botón de Emergencias</h3>
+                <p>Acceso rápido a servicios de emergencia cuando más lo necesitas.</p>
+            </div>
+            <div class="feature">
+                <img style="display:none;" src="/placeholder.svg?height=48&width=48" alt="Icono de arte">
+                <h3>Arte y Cultura</h3>
+                <p>Descubre eventos y expresiones artísticas de nuestra comunidad.</p>
+            </div>
+            <div class="feature">
+                <img style="display:none;" src="/placeholder.svg?height=48&width=48" alt="Icono de gobierno">
+                <h3>Publicaciones Gubernamentales</h3>
+                <p>Mantente informado sobre las últimas noticias y anuncios oficiales.</p>
+            </div>
+            <div class="feature">
+                <img style="display:none;" src="/placeholder.svg?height=48&width=48" alt="Icono de empleo">
+                <h3>Bolsa de Empleo</h3>
+                <p>Encuentra oportunidades laborales en tu área local.</p>
+            </div>
+            <div class="feature">
+                <img style="display:none;" src="/placeholder.svg?height=48&width=48" alt="Icono de inmobiliaria">
+                <h3>Sector Inmobiliario</h3>
+                <p>Explora propiedades y servicios inmobiliarios en Cachipay.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Directorio Cachipay. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        document.getElementById('descargaBtn').addEventListener('click', function(e) {
+            e.preventDefault();
+            alert('¡Gracias por tu interés en Directorio Cachipay! La descarga comenzará en breve.');
+        });
+
+        // Slider functionality
+       const slider = document.querySelector('.slider');
+const slides = document.querySelectorAll('.slider img');
+let currentSlide = 0;
+const totalSlides = slides.length / 3; // Dividir el número de imágenes entre 3 ya que se mostrarán 3 a la vez.
+
+function nextSlide() {
+    currentSlide = (currentSlide + 1) % totalSlides; // Actualizamos para mover de 3 en 3
+    updateSlider();
+}
+
+function updateSlider() {
+    slider.style.transform = `translateX(-${currentSlide * 100 / 3}%)`; // Movemos el slider de 100%/3 cada vez
+}
+
+setInterval(nextSlide, 5000); // Cambiar de diapositiva cada 5 segundos
+
+    </script>
+</body>
+</html>
