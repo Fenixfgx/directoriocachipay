@@ -184,7 +184,7 @@
             <div class="app-details">
                 <h2>Directorio Cachipay</h2>
                 <p>Tu guía completa para explorar y conectar con la comunidad de Cachipay.</p>
-                <a href="https://fenixfgx.github.io/directoriocachipay/Descarga/DC.apk" class="btn" id="descargaBtn" download="DC.apk">Descargar</a>
+                <a href="https://fenixfgx.github.io/directoriocachipay/Descarga/DC.apk" class="btn" id="descargaBtn" download="DirectorioCachipay.apk">Descargar</a>
             </div>
         </section>
 
@@ -237,25 +237,25 @@
     <script>
         document.getElementById('descargaBtn').addEventListener('click', function(e) {
             alert('¡Gracias por tu interés en Directorio Cachipay! La descarga comenzará en breve.');
+            // No necesitamos e.preventDefault() para que no bloquee la descarga
         });
 
         // Slider functionality
-       const slider = document.querySelector('.slider');
-const slides = document.querySelectorAll('.slider img');
-let currentSlide = 0;
-const totalSlides = slides.length / 3; // Dividir el número de imágenes entre 3 ya que se mostrarán 3 a la vez.
+        const slider = document.querySelector('.slider');
+        const slides = document.querySelectorAll('.slider img');
+        let currentSlide = 0;
+        const totalSlides = slides.length / 3;
 
-function nextSlide() {
-    currentSlide = (currentSlide + 1) % totalSlides; // Actualizamos para mover de 3 en 3
-    updateSlider();
-}
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            updateSlider();
+        }
 
-function updateSlider() {
-    slider.style.transform = `translateX(-${currentSlide * 100 / 3}%)`; // Movemos el slider de 100%/3 cada vez
-}
+        function updateSlider() {
+            slider.style.transform = `translateX(-${currentSlide * 100 / 3}%)`;
+        }
 
-setInterval(nextSlide, 5000); // Cambiar de diapositiva cada 5 segundos
-
+        setInterval(nextSlide, 5000); // Cambiar de diapositiva cada 5 segundos
     </script>
 </body>
 </html>
