@@ -10,17 +10,17 @@ const menuData = [
     {
         category: "Perros calientes",
         items: [
-            { name: "Perro clásico", price: "$25", image: "img/p1.png" },
-            { name: "Perro especial", price: "$35", image: "img/p2.png" },
-            { name: "Perro ranchero", price: "$25", image: "img/p3.png" }
+            { name: "Perro clásico", price: "$6.000", image: "img/p1.png" },
+            { name: "Perro especial", price: "$8.000", image: "img/p2.png" },
+            { name: "Perro ranchero", price: "$8.700", image: "img/p3.png" }
         ]
     },
     {
         category: "Porción pizza",
         items: [
-            { name: "Pizza carnes", price: "$25", image: "img/pi1.png" },
-            { name: "Pizza vegetariana", price: "$35", image: "img/pi2.png" },
-            { name: "Pizza pollo y miel", price: "$25", image: "img/pi3.png" }
+            { name: "Pizza carnes", price: "$4.200", image: "img/pi1.png" },
+            { name: "Pizza vegetariana", price: "$4.700", image: "img/pi2.png" },
+            { name: "Pizza pollo y miel", price: "$5.500", image: "img/pi3.png" }
         ]
     }
 ];
